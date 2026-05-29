@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+    /*fonts*/
+  --font-heading:
+    var(--font-kdam-thmor-pro), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-icon: "pmc";
+
+ /*primary color */
+  --color-primary-50:  oklch(0.97 0.013 27.2);  /* #FEF2F0 - Very soft tint */
+  --color-primary-100: oklch(0.92 0.038 27.2);  /* #FDDCD7 */
+  --color-primary-200: oklch(0.84 0.085 27.2);  /* #FDB6AD */
+  --color-primary-300: oklch(0.75 0.145 27.2);  /* #FC877B */
+  --color-primary-400: oklch(0.65 0.225 27.2);  /* #FB3E39 - Vibrant accent */
+  --color-primary-500: oklch(0.56 0.219 27.2);  /* #D8181E - Your Base Color */
+  --color-primary-600: oklch(0.48 0.185 27.2);  /* #AE1418 */
+  --color-primary-700: oklch(0.40 0.150 27.2);  /* #861213 */
+  --color-primary-800: oklch(0.32 0.120 27.2);  /* #620A0B */
+  --color-primary-900: oklch(0.24 0.090 27.2);  /* #400405 */
+  --color-primary-950: oklch(0.18 0.065 27.2);  /* #280302 - Deep shade */
+}
