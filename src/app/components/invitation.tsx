@@ -8,7 +8,6 @@ export default function Invitation() {
         <>
             <div className="relative flex flex-col flex-nowrap w-full h-auto bg-[#dc2626]">
                 <div className="bg-svg-pattern absolute inset-0 opacity-10 pointer-events-none" />
-
                     <InvitationWrapper>
                         <InvitationContext>
                         <h1 className="text-center text-white mb-1! text-[37.5px]">MOST READY</h1>
@@ -33,7 +32,7 @@ export default function Invitation() {
 
 export function InvitationWrapper({ children }: { children: ReactNode }) {
     return (
-        <div className="flex w-full max-w-full m-auto px-6 py-16">
+        <div className="flex w-full max-w-full m-auto py-18">
             {children}
         </div>
     )

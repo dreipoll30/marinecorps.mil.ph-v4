@@ -3,16 +3,89 @@
 import Link from "next/link"
 import { ReactNode, useEffect, useState } from "react"
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { IconChevronDown, IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
+import { SocialMenu, TopbarSocialMenuItem } from "./socials";
+import { NavContainer, Navitem, NavLink, NavDropdown } from "./navlinks";
 
 
 interface TopbarMenuProps {
     toggleMenu: () => void;
 }
 
-
 export default function Topbar({ toggleMenu }: TopbarMenuProps) {
+
+    const exploreMarinesItems = [
+        {
+            label: "History",
+            href: "/explore/history"
+        },
+        {
+            label: "Leader's Corner",
+            href: "/explore/organization"
+        },
+        {
+            label: "Marine Generals",
+            href: "/explore/bases"
+        },
+        {
+            label: "Sergeant Major",
+            href: "/explore/bases"
+        },
+        {
+            label: "Marine Heroes",
+            href: "/explore/bases"
+        },
+        {
+            label: "Ransk and Insignia",
+            href: "/explore/bases"
+        },
+        {
+            label: "Marine Forces",
+            href: "/explore/bases"
+        },
+
+    ];
+
+    const newsItems = [
+        {
+            label: "Marine Journal",
+            href: "/news/latest"
+
+        },
+        {
+            label: "Events",
+            href: "/Gender and Development"
+
+        },
+        {
+            label: "CITEMAR6",
+            href: "/news/gallery"
+
+        },
+        {
+            label: "Virtual Information",
+            href: "/news/gallery"
+
+        },
+    ];
+
+    const joinItems = [
+        {
+            label: "Volunteer as a Marine",
+            href: "/careers/officers"
+
+        },
+        {
+            label: "Join the Civilian Workforce",
+            href: "/careers/enlisted"
+
+        },
+        {
+            label: "Volunteer as Reservist",
+            href: "/careers/enlisted"
+
+        },
+    ];
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -27,7 +100,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
 
 
     return (
-        <div className={`w-full text-center z-50 fixed top-0 right-0 flex h-auto transition-all ease-in duration-100  ${scrolled ? "bg-white shadow-md py-4 lg:pl-9 md:pl-8 pl-8" : "bg-transparent py-9 lg:pl-8.5 md:pl-8 pl-8 "} `}>
+        <div className={`w-full text-center z-50 fixed top-0 right-0 flex h-auto transition-all ease-in duration-100  ${scrolled ? "bg-white shadow-md py-3 lg:pl-9 md:pl-8 pl-8" : "bg-transparent py-9 lg:pl-8.5 md:pl-8 pl-8 "} `}>
             <TopbarWrapper>
                 <TopbarHeaderWrapper>
                     <TopbarBrand
@@ -39,7 +112,6 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                         Philippine Marine Corps
                     </TopbarHeading>
                 </TopbarHeaderWrapper>
-
                 <TopbarPanels>
                     <TopbarPanel variant="primary" scrolled={scrolled}>
                         <NavContainer>
@@ -47,20 +119,32 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                                 <NavLink href="/contact-us">Contact Us</NavLink>
                                 <NavLink href="/careers" >Credits</NavLink>
                             </Navitem>
+                            <SocialMenu>
+                                <TopbarSocialMenuItem className="icon icon-logo-facebook" href="" label="" scrolled={scrolled} />
+                                <TopbarSocialMenuItem className="icon icon-logo-twitter" href="" label="" scrolled={scrolled} />
+                                <TopbarSocialMenuItem className="icon icon-logo-youtube" href="" label="" scrolled={scrolled} />
+                            </SocialMenu>
                         </NavContainer>
                     </TopbarPanel>
                     <TopbarPanel variant="secondary" scrolled={scrolled}>
                         <NavContainer>
                             <Navitem>
                                 <NavLink href="/transparency" secondary={true}>Home</NavLink>
-                                <NavLink href="/bids-and-awards" secondary={true}>Explore Marines
-                                    <IconChevronDown size={14} className="ml-1" />
-                                </NavLink>
-                                <NavLink href="/citizen-charter" secondary={true}>News
-                                    <IconChevronDown size={14} className="ml-1" />
-                                </NavLink>
-                                <NavLink href="/gad" secondary={true}>Join the Marine Corps
-                                    <IconChevronDown size={14} className="ml-1" /></NavLink>
+                                <NavDropdown
+                                    title="Explore Marines"
+                                    href="/bids-and-awards"
+                                    items={exploreMarinesItems}
+                                />
+                                <NavDropdown
+                                    title="News"
+                                    href="/citizen-charter"
+                                    items={newsItems}
+                                />
+                                <NavDropdown
+                                    title="Join the Marine Corps"
+                                    href="/gad"
+                                    items={joinItems}
+                                />
                                 <NavLink href="/lost-and-found" secondary={true}>Transparency Seal</NavLink>
                             </Navitem>
                         </NavContainer>
@@ -102,7 +186,7 @@ export function TopbarHeaderWrapper({ children }: { children: ReactNode }) {
 
 export function TopbarHeading({ children, scrolled }: TopbarHeadingProps) {
     return (
-        <h1 className={`flex items-center text-3xl mb-0 font-medium ${scrolled ? "text-slate-800" : "text-white"}`} >
+        <h1 className={`flex items-center text-[28px] mb-0 font-medium ${scrolled ? "text-slate-800" : "text-white"}`} >
             {children}
         </h1>
     )
@@ -150,8 +234,8 @@ export function TopbarPanel({ children, variant, scrolled }: TopbarPanelProps) {
     const base = "w-full flex items-center justify-end  border-white/20 pr-[36px]";
 
     const primaryStyles = scrolled
-        ? "py-3"
-        : "text-white py-3";
+        ? ""
+        : "text-white";
 
     const secondaryStyles = scrolled
         ? "border-t border-t-gray-200 "
@@ -169,46 +253,7 @@ export function TopbarPanel({ children, variant, scrolled }: TopbarPanelProps) {
     )
 }
 
-export function NavContainer({ children }: { children: ReactNode }) {
-    return (
-        <div className="flex">
-            {children}
-        </div>
-    )
-}
 
-
-export function Navitem({ children }: { children: ReactNode }) {
-    return (
-        <div className="flex flex-row mx-2.5 first:ml-0 last:mr-0 lg:gap-6 gap-4">
-            {children}
-        </div>
-    )
-}
-
-interface NavLinksProps {
-    href: string,
-    children: ReactNode,
-    scrolled?: boolean;
-    className?: string
-    secondary?: boolean;
-}
-
-export function NavLink({ href, children, scrolled, className, secondary }: NavLinksProps) {
-
-    return (
-        <Link
-            href={href}
-            className={`relative flex items-center justify-center h-full p-0 
-             ${secondary ? "pt-2 mt-[-1.5px] border-transparent border-t-3 hover:border-primary-500" : ""}
-                }
-                ${className}
-      `}
-        >
-            {children}
-        </Link>
-    )
-}
 
 // export function MobileMenuButton () {
 //     return(

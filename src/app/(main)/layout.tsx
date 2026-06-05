@@ -2,6 +2,8 @@ import React from "react";
 import Topbar from "../components/topbar";
 import clsx from "clsx";
 import Invitation from "../components/invitation";
+import LogoWall from "../components/logowall";
+import Footer from "../components/footer";
 
 
 export default function MainLayout({
@@ -18,6 +20,8 @@ export default function MainLayout({
                 {children}
             </main>
             <Invitation/>
+            <LogoWall/>
+            <Footer/>
         </div>
     )
 }
