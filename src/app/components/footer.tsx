@@ -102,19 +102,19 @@ export const navigationData = [
 
 export default function Footer() {
     return (
-        <div className="relative w-full flex flex-col flex-nowrap h-auto py-18">
+        <div className="relative w-full flex flex-col flex-nowrap h-auto lg:py-18 py-9">
             <FooterWrapper>
                 <FooterGridContainer>
                     <FooterGridItem>
                         <FooterBrandItems>
                             <FooterBrand src="/static/pmc-logo.png" href="" alt="" />
-                            <h2 className="text-secondary-600 text-[28px] mb-0">Philippine Marine Corps</h2>
+                            <h2 className="text-secondary-600 lg:text-[28px] text-[22px] mb-0">Philippine Marine Corps</h2>
                         </FooterBrandItems>
                     </FooterGridItem>
                     <FooterGridItem>
                         <FooterBlock className="border-b">
                             <Social>
-                                <h3 className="text-[22px] mb-0">Staying Connected</h3>
+                                <h3 className="text-[22px] mb-0 text-center">Stay Connected</h3>
                                 <SocialMenu>
                                     <SocialMenuItem href="" label="Visit" className="icon icon-logo-facebook" />
                                     <SocialMenuItem href="" label="Visit" className="icon icon-logo-twitter" />
@@ -152,7 +152,7 @@ export default function Footer() {
 
 export function FooterWrapper({ children }: { children: ReactNode }) {
     return (
-        <div className="relative pl-9 w-full">
+        <div className="relative lg:pl-9 px-[24px] w-full">
             {children}
         </div>
     )
@@ -168,7 +168,7 @@ export function FooterGridContainer({ children }: { children: ReactNode }) {
 
 export function FooterGridItem({ children }: { children: ReactNode }) {
     return (
-        <div className="relative col-span-6">
+        <div className="relative lg:col-span-6 col-span-12">
             {children}
         </div>
     )
@@ -176,7 +176,7 @@ export function FooterGridItem({ children }: { children: ReactNode }) {
 
 export function FooterBlock({ children, className }: { children: ReactNode, className?: string }) {
     return (
-        <div className={`col-span-6 relative flex flex-col flex-nowrap pr-9 pb-9 border-gray-200 ${className}`}>
+        <div className={`lg:col-span-6 col-span-12 relative flex flex-col flex-nowrap lg:pr-9 pb-9 border-gray-200 ${className}`}>
             {children}
         </div>
     )
@@ -184,7 +184,7 @@ export function FooterBlock({ children, className }: { children: ReactNode, clas
 
 export function FooterBrandItems({ children }: { children: ReactNode }) {
     return (
-        <div className="w-full flex flex-row gap-2 flex-nowrap items-center">
+        <div className="w-full flex flex-row gap-2 flex-nowrap items-center text-center">
             {children}
         </div>
     )
@@ -201,7 +201,7 @@ interface FooterBrandProps {
 export function FooterBrand({ children, href, alt, src }: FooterBrandProps) {
     return (
         <Link href={href}>
-            <div className="relative w-33 h-30 flex items-center">
+            <div className="relative lg:w-33 lg:h-30 w-28 h-31 flex items-center">
                 <Image
                     src={src}
                     alt={alt}
@@ -215,7 +215,7 @@ export function FooterBrand({ children, href, alt, src }: FooterBrandProps) {
 
 export function FooterMenu({ children }: { children: ReactNode }) {
     return (
-        <div className="col-span-6 gap-6 flex flex-row py-[12px]">
+        <div className="lg:col-span-6 gap-6 flex lg:flex-row flex-col py-3 ">
             {children}
         </div>
     )
@@ -231,7 +231,7 @@ export function FooterMenuGroup({ children }: { children: ReactNode }) {
 
 export function FooterMenuGroupHeading({ children }: { children: ReactNode }) {
     return (
-        <h2 className="text-[20px] text-left block mb-0 w-full">
+        <h2 className="text-[20px] lg:text-left text-center block mb-0 w-full">
             {children}
         </h2>
     )
@@ -259,7 +259,7 @@ interface NavlinksLinkProps {
 }
 export function NavlinksLink({ children, href }: NavlinksLinkProps) {
     return (
-        <Link className="block w-full m-0 text-gray-500 decoration-0 text-[18px] hover:text-secondary-500" href={href}>
+        <Link className="block w-full m-0 text-gray-500 decoration-0 text-center lg:text-left text-[18px] hover:text-secondary-500" href={href}>
             {children}
         </Link>
     )

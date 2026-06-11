@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Shelf({ children }: { children: ReactNode }) {
     return (
-        <div className="flex flex-col flex-nowrap w-full h-auto py-9 lg:py-18 md:py-12 bg-white bg-svg-pattern">
+        <div className="flex flex-col flex-nowrap w-full h-auto py-9 px-[24px] lg:py-18 md:py-12 bg-white bg-svg-pattern">
             {children}
         </div>
     )

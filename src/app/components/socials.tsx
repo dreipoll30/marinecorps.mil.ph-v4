@@ -3,7 +3,7 @@ import React, { ReactNode } from "react"
 
 export function Social({ children }: { children: ReactNode }) {
     return (
-        <div className="w-full flex flex-col lg:flex-row flex-nowrap justify-between">
+        <div className="w-full flex flex-col gap-4 lg:gap-0 lg:flex-row flex-nowrap justify-between ">
             {children}
         </div>
     )
@@ -11,7 +11,7 @@ export function Social({ children }: { children: ReactNode }) {
 
 export function SocialMenu({ children }: { children: ReactNode }) {
     return (
-        <div className="inline-flex flex-row shrink-0 grow-0 w-auto m-0 items-center">
+        <div className="inline-flex flex-row shrink-0 grow-0 w-auto m-0 items-center justify-center">
             {children}
         </div>
     )

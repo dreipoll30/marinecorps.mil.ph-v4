@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${kdamThmorPro.variable}`}>
-      <body className="bg-white h-full w-full min-h-screen flex">
+      <body className="bg-white h-full w-full min-h-screen flex flex-col">
         <div className="flex flex-col flex-nowrap w-full m-auto p-0">
             {children}
           </div>
