@@ -1,0 +1,110 @@
+/* orgchart.module.css */
+
+/* --- Base Structural Stems --- */
+.item {
+  position: relative;
+}
+
+/* Vertical line going UP from a card to its horizontal bar */
+.item::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.5px;
+  height: 32px;
+  background-color: #ff4d4d;
+  z-index: 1;
+}
+
+/* Vertical line dropping DOWN from a parent card */
+.parent::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.5px;
+  height: 161px;
+  background-color: #ff4d4d;
+  z-index: 1;
+}
+
+/* --- Row 1: Sgt Major Right-Wing Side Connection --- */
+.ucrtw {
+  position: absolute;
+  left: 50%;
+  margin-left: 180px;
+  top: 75;
+  z-index: 2;
+}
+
+.sgtMajorConnector {
+  position: absolute;
+  top: 96px; /* Aligns with the bottom edge of Row 1 cards */
+  left: 50%;
+  width: 236px;
+  height: 42px;
+  border-bottom: 2px solid #ff4d4d;
+  border-right: 2px solid #ff4d4d;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Row 4: MC1 to MC5 Horizontal Grid Pipeline --- */
+.ucos2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 32px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+/* Draws the solid horizontal crossbar line spanning the top row cards */
+.ucos2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% / (var(--node-count) * 0.8));
+  right: calc(100% / (var(--node-count) * 1.28));
+  height: 0.5px;
+  background-color: #ff4d4d;
+  z-index: 1;
+}
+
+/* --- Row 5: MC6 to MC11 Horizontal Grid Pipeline --- */
+.ucos3 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 32px;
+  margin-top: 32px;
+  width: 100%;
+}
+
+/* Draws the solid horizontal crossbar line spanning the bottom row cards */
+.ucos3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% / (var(--node-count) * 0.89));
+  right: calc(100% / (var(--node-count) * 1.069));
+  height: 0.5px;
+  background-color: #ff4d4d;
+  z-index: 1;
+}
+
+/* --- Center Drop Bypass Line: Runs straight past Row 4 into Row 5 --- */
+.bypassStemDown::after {
+  content: "";
+  position: absolute;
+  top: 111;
+  left: 330;
+  transform: translateX(-50%);
+  width: 0.6px;
+  height: 160px; /* Drop length passes safely through row 4 down to row 5 crossbar */
+  background-color: #ff4d4d;
+  z-index: 0;
+}

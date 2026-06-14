@@ -1,16 +1,28 @@
+import Link from "next/link";
 import React, { ReactNode } from "react";
+
+
+
 
 interface SectionHeadingWrapperProps {
     children?: ReactNode;
     className?: string
-
 }
+
 export function SectionHeadingWrapper({ children, className }: SectionHeadingWrapperProps) {
     return (
         <div className={`w-full relative flex flex-col flex-nowrap justify-center items-center pt-9 m-auto before:content-[''] before:absolute before:-top-1 before:left-1/2 before:-translate-x-1/2 before:w-22.5 before:h-1.5 before:bg-primary-500  ${className}`}>
             {children}
         </div>
     )
+}
+
+export function Section ({children}: {children: React.ReactNode}) {
+  return (
+    <div className="flex flex-col flex-nowrap w-full mb-11 last:mb-0">
+      {children}
+    </div>
+  )
 }
 
 interface SectionHeadingProps {
@@ -30,9 +42,36 @@ export function SectionHeading({ children, className, title }: SectionHeadingPro
     )
 }
 
-export function Breadcrumbs({ children }: { children: ReactNode }) {
-    return (
-        <div className="flex justify-center mt-2.5">{children}</div>
-    )
+export function Breadcrumbs({ children }) {
+  return (
+    <nav aria-label="Breadcrumb" className="flex flex-row flex-nowrap items-center">
+      <ol className="flex items-center">
+        {children}
+      </ol>
+    </nav>
+  );
+}
+
+
+export function BreadcrumbsItem({ href, children }) {
+  const itemStyles = `
+    relative inline-flex items-center mr-6 no-underline text-base font-normal 
+    text-slate-500 hover:text-slate-900 transition-colors duration-200
+    last:mr-0`;
+
+  return (
+    <li className="inline-flex items-center">
+      {href ? (
+        <Link href={href} className={itemStyles}>
+          {children}
+        </Link>
+      ) : (
+        // If no href is passed, render as plain text (perfect for the current active page)
+        <span aria-current="page" className={`${itemStyles} text-slate-900 font-medium`}>
+          {children}
+        </span>
+      )}
+    </li>
+  );
 }
 

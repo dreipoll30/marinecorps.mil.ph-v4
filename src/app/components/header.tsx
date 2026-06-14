@@ -78,7 +78,7 @@ export function HeaderThumbnailTitle({ children }: { children: ReactNode }) {
 
 export function HeaderThumbnailInfo({ children }: { children: ReactNode }) {
     return (
-      
+
         <div className="z-3 absolute top-auto right-0 left-0 bottom-0 flex justify-end w-full p-3 transition-all duration-200 ease-in-out overflow-hidden
                         before:content-[''] before:absolute before:top-5 before:right-12 before:w-full before:h-px before:bg-white/30">
             <h3 className="text-[20px] text-white font-medium leading-none mb-0">
@@ -97,3 +97,29 @@ export function HeaderThumbnailImage({ children }: { children: ReactNode }) {
         </div>
     )
 }
+
+export function HeaderInside({ children }: { children: ReactNode }) {
+    return (
+        <div className="relative h-[300px] overflow-hidden lg:h-[500px]">
+            {children}
+        </div>
+    )
+}
+
+export function HeaderInsideWrapper({ children }: { children: ReactNode }) {
+    return (
+        <div className="relative flex flex-col flex-nowrap h-full ">
+            {children}
+        </div>
+    )
+}
+
+export function HeaderInsideImage({ children }: { children: ReactNode }) {
+    return (
+        <div className="z-1 before:content-[''] before:bg-gradient-to-b before:from-[#101419]/80 before:to-transparent after:hidden">
+            {children}
+        </div>
+    )
+}
+
+

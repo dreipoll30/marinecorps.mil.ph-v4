@@ -21,7 +21,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
         },
         {
             label: "Leader's Corner",
-            href: "/explore/organization"
+            href: "/leaders"
         },
         {
             label: "Marine Generals",
@@ -129,10 +129,10 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                     <TopbarPanel variant="secondary" scrolled={scrolled}>
                         <NavContainer>
                             <Navitem>
-                                <NavLink href="/transparency" secondary={true}>Home</NavLink>
+                                <NavLink href="/" secondary={true}>Home</NavLink>
                                 <NavDropdown
                                     title="Explore Marines"
-                                    href="/bids-and-awards"
+                                    href="/"
                                     items={exploreMarinesItems}
                                 />
                                 <NavDropdown

@@ -86,7 +86,7 @@ interface StoriesGridItemProps {
 
 export function StoriesGridItem({ href, className, children, isFirst }: StoriesGridItemProps) {
     return (
-        <Link className={`group relative flex flex-col flex-nowrap justify-center items-center w-full bg-gray-300 overflow-hidden transition-all duration-200 ${isFirst ? 'h-[800px] min-[577px]:h-auto min-[577px]:col-start-1 min-[577px]:row-span-2' : 'h-50 border-b border-white min-[577px]:h-auto min-[577px]:border-none'}`} href={href}>{children}</Link>
+        <div className={`group relative flex flex-col flex-nowrap justify-center items-center w-full bg-gray-300 overflow-hidden transition-all duration-200 ${isFirst ? 'h-[800px] min-[577px]:h-auto min-[577px]:col-start-1 min-[577px]:row-span-2' : 'h-50 border-b border-white min-[577px]:h-auto min-[577px]:border-none'}`} >{children}</div>
     )
 }
 
