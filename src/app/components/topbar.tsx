@@ -24,24 +24,28 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
             href: "/leaders"
         },
         {
+            label: "The Commandants",
+            href: "/commandants"
+        },
+         {
             label: "Marine Generals",
-            href: "/explore/bases"
+            href: "/generals"
         },
         {
             label: "Sergeant Major",
-            href: "/explore/bases"
+            href: "/seargents"
         },
         {
-            label: "Marine Heroes",
-            href: "/explore/bases"
+            label: "Wall of Heroes",
+            href: "/wall-of-heroes"
         },
         {
-            label: "Ransk and Insignia",
-            href: "/explore/bases"
+            label: "Ranks and Insignia",
+            href: "/ranks"
         },
         {
             label: "Marine Forces",
-            href: "/explore/bases"
+            href: "/marine-forces"
         },
 
     ];

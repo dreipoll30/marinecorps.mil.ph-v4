@@ -10,14 +10,19 @@ export function VerticalDataGroup ({children, className}:VerticalDataGroupProps)
     )
 }
 
-export function DataStrong({children}:{children: React.ReactNode}) {
+interface DataStrongProps {
+    children: ReactNode;
+    className?: string;
+}
+
+export function DataStrong({children, className}:DataStrongProps) {
     return (
-        <span className="font-bold text-lg text-black justify-start w-full">{children}</span>
+        <span className={`font-bold text-lg text-black justify-start w-full ${className}`}>{children}</span>
     )
 }
 
 export function Data({children, className}:{children: React.ReactNode, className?: string}) {
     return (
-        <span className={`font-normal text-[18px] text-slate-600 justify-start w-full ${className}`}>{children}</span>
+        <span className={`font-normal text-[18px] text-slate-500 justify-start w-full ${className}`}>{children}</span>
     )
 }
