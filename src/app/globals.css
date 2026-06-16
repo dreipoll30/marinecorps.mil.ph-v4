@@ -177,6 +177,8 @@ Converted to Plain CSS for Tailwind v4
   --color-white-3: rgba(255, 255, 255, 0.3);
   --color-white-2: rgba(255, 255, 255, 0.2);
   --color-white-1: rgba(255, 255, 255, 0.1);
+
+  --theme-shadow-custom: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
 }
 
 @layer base {
@@ -197,9 +199,16 @@ Converted to Plain CSS for Tailwind v4
     @apply text-[40px];
   }
 
+  h2 {
+    @apply text-[40px]
+  }
   
   h3 {
     @apply text-[24px];
+  }
+
+  h4 {
+    @apply text-[16px];
   }
 
   p {
