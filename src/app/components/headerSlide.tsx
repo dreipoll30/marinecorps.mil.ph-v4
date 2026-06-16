@@ -81,7 +81,7 @@ export default function HeaderSlide({ id, image, headline, description, videoUrl
                                 <h1 className="text-[40px] font-medium text-white mb-0!">
                                     MOST READY
                                 </h1>
-                                <p className="text-[18px] text-white mb-4!">
+                                <p className="text-[18px] md:text-[18px] text-white mb-4!">
                                     <strong>M</strong>aritime Soul, <strong>O</strong>ccupational Health and Safety, <strong>S</strong>
                                     pecialized Forces, <strong>T</strong>raining as a routine grind. <strong>R</strong>elevant and
                                     Reliable, <strong>E</strong>thos and Enthusiasm, <strong>A</strong>daptive, <strong>D</strong>uty to

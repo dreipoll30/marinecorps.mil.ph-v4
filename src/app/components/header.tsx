@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export default function Header({ children }: { children: ReactNode }) {
     return (
-        <div className="relative flex flex-col flex-nowrap w-full h-screen lg:h-215 p-0 bg-gray-100 transition-all ease-in-out duration-200">
+        <div className="relative flex flex-col flex-nowrap w-full h-screen p-0 bg-gray-100 transition-all ease-in-out duration-200 lg:h-215">
             <HeaderWrapper>
                 {children}
             </HeaderWrapper>
@@ -32,7 +32,7 @@ interface HeaderContextProps {
 }
 export function HeaderContext({ className, children }: HeaderContextProps) {
     return (
-        <div className={`absolute bottom-0 left-0 z-8 flex flex-col flex-nowrap justify-end w-full h-full p-6 sm:p-9 lg:w-[45%] md:w-[50%] lg:p-[62px] ${className}`}>
+        <div className={`absolute top-0 bottom-0 left-0 z-8 flex flex-col flex-nowrap justify-end w-full h-full p-6 sm:p-9 xl:w-[45%] lg:w-[50%] xl:p-[62px] ${className}`}>
             {children}
         </div>
     );
@@ -51,7 +51,7 @@ export function HeaderImage({ children }: { children: ReactNode }) {
 
 export function HeaderInfo({ children }: { children: ReactNode }) {
     return (
-        <div className="flex flex-col flex-nowrap w-full mb-15 lg:max-w-150 *:my-1.5 md:*:my-3 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
+        <div className="flex flex-col w-full mb-15 xl:max-w-150 *:my-1.5 md:*:my-3 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
             {children}
         </div>
     )

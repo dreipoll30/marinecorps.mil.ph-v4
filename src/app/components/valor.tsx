@@ -13,7 +13,7 @@ export function Valor({ children, className }: { children: ReactNode, className?
 
 interface ValorItem {
     children: ReactNode;
-    className: string;
+    className?: string;
 }
 
 export function ValorItem({ children, className, ...props}: ValorItem) {
@@ -40,7 +40,7 @@ export function ValorImage({ children, className }: { children: ReactNode, class
 
 export function ValorBadge({ children }: { children: ReactNode }) {
     return (
-        <div className="z-2 flex absolute justify-center items-center w-8 h-8 rounded-full bg-yellow-500 border-2 border-white -bottom-4 left-[50%] -translate-x-[50%] transition-all ease-in-out duration-200 sm:inline-flex">
+        <div className="z-2 flex absolute justify-center items-center w-8 h-8 rounded-full bg-yellow-500 border-2 border-white -bottom-4 left-[50%] translate-x-[-50%] transition-all ease-in-out duration-200 sm:inline-flex">
             {children}
         </div>
     )
@@ -102,7 +102,7 @@ export function ValorMini({ children }: { children: ReactNode }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <div className={`z-4 fixed top-40 left-0 right-0 flex justify-center w-full m-auto bg-white rounded-sm shadow-md transition-all ease-in-out duration-200 sm:top-28 sm:left-9 sm:right-9 lg:top-38 max-w-275 
+        <div className={`z-4 fixed top-[90px] left-0 right-0 flex justify-center w-full m-auto max-w-[90%] bg-white rounded-sm shadow-md transition-all ease-in-out duration-200 sm:top-28 sm:left-9 sm:right-9 lg:top-32 lg:max-w-275
         ${scrolled
                 ? "opacity-100 visible -translate-y-5"
                 : "opacity-0 invisible translate-y-"

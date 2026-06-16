@@ -104,8 +104,8 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
 
 
     return (
-        <div className={`w-full text-center z-50 fixed top-0 right-0 flex h-auto transition-all ease-in duration-100  ${scrolled ? "bg-white shadow-md py-3 lg:pl-9 md:pl-8 pl-8" : "bg-transparent py-9 lg:pl-8.5 md:pl-8 pl-8 "} `}>
-            <TopbarWrapper>
+        <div className={`w-full text-center z-50 fixed top-0 right-0 flex h-auto transition-all ease-in duration-100  ${scrolled ? "bg-white shadow-md " : "bg-transparent"} `}>
+            <TopbarWrapper scrolled={scrolled}>
                 <TopbarHeaderWrapper>
                     <TopbarBrand
                         src={scrolled ? "/static/pmc-logo.png" : "/static/pmc-logo-large.png"}
@@ -156,20 +156,20 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                 </TopbarPanels>
                 <button
                     onClick={toggleMenu}
-                    className={`block sm:hidden cursor-pointer p-2 transition-colors duration-150 rounded focus:outline-none ${scrolled ? "text-slate-800 hover:bg-slate-100" : "text-white hover:bg-white/10"
+                    className={`block xl:hidden  cursor-pointer p-2 transition-colors duration-150 rounded-full focus:outline-none ${scrolled ? "text-slate-800 hover:bg-slate-100 bg-gray-100" : "text-white hover:bg-white/10"
                         }`}
                     aria-label="Open Menu"
                 >
-                    <IconMenu2 size={30} />
+                    <IconMenu2 size={32} stroke={1} />
                 </button>
             </TopbarWrapper>
         </div>
     )
 }
 
-export function TopbarWrapper({ children }: { children: ReactNode }) {
+export function TopbarWrapper({ children,scrolled }: { children: ReactNode,scrolled: boolean }) {
     return (
-        <div className="flex flex-row justify-between items-center w-full h-full ">
+        <div className={`flex flex-row justify-between items-center w-full h-full transition-all ease-in-our duration-200 ${scrolled ? "py-3 lg:pl-9 lg:pr-0 md:pl-8 md:pr-8 sm:px-9 " : "py-6 sm:p-9 lg:py-9 lg:pl-9 lg:pr-0 "} `}>
             {children}
         </div>
     )
@@ -190,7 +190,7 @@ export function TopbarHeaderWrapper({ children }: { children: ReactNode }) {
 
 export function TopbarHeading({ children, scrolled }: TopbarHeadingProps) {
     return (
-        <h1 className={`flex items-center text-[28px] mb-0 font-medium ${scrolled ? "text-slate-800" : "text-white"}`} >
+        <h1 className={`flex shrink-0 items-center lg:text-[28px] text-[24px] mb-0 font-medium ${scrolled ? "text-slate-800" : "text-white"}`} >
             {children}
         </h1>
     )
@@ -206,7 +206,7 @@ interface TopbarBrandProps {
 
 export function TopbarBrand({ src, href, alt }: TopbarBrandProps) {
     return (
-        <div className="lg:w-33 md:w-25 w-15 h-full   ">
+        <div className="lg:w-33 md:w-25 sm:w-25 w-15 h-full   ">
             <Link href={href}>
                 <Image
                     src={src}
@@ -222,7 +222,7 @@ export function TopbarBrand({ src, href, alt }: TopbarBrandProps) {
 
 export function TopbarPanels({ children }: { children: ReactNode }) {
     return (
-        <div className="hidden sm:flex flex-col flex-nowrap shrink-0 grow">
+        <div className="hidden xl:flex flex-col flex-nowrap shrink-0 grow">
             {children}
         </div>
     )
@@ -258,11 +258,10 @@ export function TopbarPanel({ children, variant, scrolled }: TopbarPanelProps) {
 }
 
 
+export function MobileMenuButton () {
+    return(
+        <div className="inline-flex">
 
-// export function MobileMenuButton () {
-//     return(
-//         <div className="inline-flex">
-
-//         </div>
-//     )
-// }
+        </div>
+    )
+}
