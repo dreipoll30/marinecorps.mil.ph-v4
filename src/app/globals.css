@@ -189,8 +189,8 @@ Converted to Plain CSS for Tailwind v4
 
   h1,
   h2,
-  h3,
   h4,
+  h3,
   h5,
   h6 {
     @apply font-heading mb-5;
@@ -205,7 +205,7 @@ Converted to Plain CSS for Tailwind v4
   }
   
   h3 {
-    @apply text-[24px];
+    @apply text-[24px] mb-6;
   }
 
   h4 {
@@ -213,7 +213,7 @@ Converted to Plain CSS for Tailwind v4
   }
 
   p {
-    @apply mb-5;
+    @apply mb-6 text-[18px] text-slate-600;
   }
 
   strong {

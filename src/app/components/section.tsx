@@ -18,9 +18,9 @@ export function SectionHeadingWrapper({ children, className }: SectionHeadingWra
   )
 }
 
-export function Section({ children }: { children: React.ReactNode }) {
+export function Section({ children,className }: { children: React.ReactNode, className?: string }) {
   return (
-    <div className="flex flex-col flex-nowrap w-full mb-11 last:mb-0">
+    <div className={`flex flex-col flex-nowrap w-full mb-11 last:mb-0 ${className}`}>
       {children}
     </div>
   )
@@ -35,7 +35,7 @@ interface SectionHeadingProps {
 export function SectionHeading({ children, className, title }: SectionHeadingProps) {
   return (
     <>
-      <h1 className={`text-center mx-32 lg:text-[38px] text-[32px] w-full ${className}`}>{title}</h1>
+      <h1 className={`text-center mx-32 lg:text-[38px] text-[32px] w-full mb-0 ${className}`}>{title}</h1>
       {children && (
         <Breadcrumbs>{children}</Breadcrumbs>
       )}

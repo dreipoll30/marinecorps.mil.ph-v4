@@ -10,6 +10,15 @@ export function VerticalDataGroup ({children, className}:VerticalDataGroupProps)
     )
 }
 
+export function HorizontalDataGroup ({children, className}:VerticalDataGroupProps) {
+    return (
+        <div className={`flex flex-row items-center justify-center ${className}`}>{children}</div>
+    )
+}
+
+
+
+
 interface DataStrongProps {
     children: ReactNode;
     className?: string;
