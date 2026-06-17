@@ -201,15 +201,15 @@ Converted to Plain CSS for Tailwind v4
   }
 
   h2 {
-    @apply text-[40px]
+    @apply text-[40px];
   }
-  
+
   h3 {
     @apply text-[24px] mb-6;
   }
 
   h4 {
-    @apply text-[16px];
+    @apply text-[20px];
   }
 
   p {
@@ -218,6 +218,15 @@ Converted to Plain CSS for Tailwind v4
 
   strong {
     @apply relative text-white font-medium;
+  }
+
+  ul {
+    @apply list-outside mb-[20px] ml-[20px];
+    list-style-type: circle;
+  }
+
+  ul li {
+    @apply font-body text-slate-600 leading-[1.6] m-0 p-0 text-[18px];
   }
 }
 
@@ -356,7 +365,6 @@ Converted to Plain CSS for Tailwind v4
 
       .swiper-button-prev {
         margin-left: 24px !important;
-
       }
 
       .swiper-button-next {

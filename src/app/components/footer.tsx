@@ -102,7 +102,7 @@ export const navigationData = [
 
 export default function Footer() {
     return (
-        <div className="relative w-full flex flex-col flex-nowrap h-auto lg:py-18 py-9">
+        <div className="relative w-full flex flex-col flex-nowrap h-auto lg:py-18 py-9 bg-svg-pattern">
             <FooterWrapper>
                 <FooterGridContainer>
                     <FooterGridItem>

@@ -21,7 +21,7 @@ export function ShelfWrapper({ children }: { children: ReactNode }) {
 
 export function ShelfBlock({ children }: { children: ReactNode }) {
     return (
-        <div className="flex w-full max-w-350">
+        <div className="flex w-full max-w-350 bg-svg-pattern">
             {children}
         </div>
     )
