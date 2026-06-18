@@ -68,7 +68,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
         },
         {
             label: "CITEMAR6",
-            href: "/news/gallery"
+            href: "/citemar6"
 
         },
         {

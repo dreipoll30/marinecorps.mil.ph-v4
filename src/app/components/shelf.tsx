@@ -35,10 +35,9 @@ export function ShelfSlides({ children }: { children: ReactNode }) {
     )
 }
 
-export function ShelfSlide({ children }: { children: ReactNode }) {
+export function ShelfSlide({ children, className }: { children: ReactNode, className?:string }) {
     return (
-        <div className="z-3 relative flex flex-col flex-nowrap w-full max-h-135 
-        bg-gray-300 rounded-xl overflow-hidden">
+        <div className={`z-3 relative flex flex-col flex-nowrap w-full max-h-135 rounded-xl bg-none overflow-hidden shadow-[0_10px_20px_0_rgba(0,0,0,0.4)]  ${className}`}>
             {children}
         </div>
     )
@@ -61,7 +60,7 @@ interface ShelfSlideImageProps {
 export function ShelfSlideImage({ src, alt }: ShelfSlideImageProps) {
     return (
         <div className="relative flex w-full h-auto  ">
-            <Image src={src} alt={alt} width={1000} height={800} className="object-cover" />
+            <Image src={src} alt={alt} width={1000} height={800} className="object-cover " />
         </div>
     )
 }
@@ -69,12 +68,13 @@ export function ShelfSlideImage({ src, alt }: ShelfSlideImageProps) {
 interface ShelfSlideDetailsProps {
     title: string;
     issue?: string
-    href: string;
+    className?:string;
+    children?: ReactNode;
 }
 
-export function ShelfSlideDetails({ title, issue, href }: ShelfSlideDetailsProps) {
+export function ShelfSlideDetails({ title, issue, href, className, children }: ShelfSlideDetailsProps) {
     return (
-        <div className="absolute bottom-0 right-0 left-0 flex flex-col flex-nowrap items-center justify-end w-full h-full px-[24px] py-[8px] gap-6  bg-linear-to-b from-black/5  to-black ">
+        <div className={`absolute bottom-0 right-0 left-0 flex flex-col flex-nowrap items-center justify-end w-full h-full px-6 py-2 gap-6  bg-linear-to-b from-black/5  to-black ${className}`}>
             <h2 className="text-white text-center text-[20px] mb-0">
                 {title}
             </h2>
@@ -83,7 +83,7 @@ export function ShelfSlideDetails({ title, issue, href }: ShelfSlideDetailsProps
                     {issue}
                 </h3>
             )}
-            <ShelfSlideDownloadButton href={href} />
+            {children}  
         </div>
     )
 }
@@ -99,11 +99,22 @@ export function ShelfSlideDownloadButton({ href, className, children }: ShelfSli
         <Link
             target="_blank"
             href={href}
-            className={`gap-3 w-fit py-4  mb-5 text-white flex flex-row border justify-center items-center align-middle  font-body font-medium h-12 px-6 text-[14px] uppercase tracking-[1px] decorate-none border-white-7 bg-white-1 transition-all duration-300 ease-in-out hover:bg-primary-500 hover:border-primary-500 ${className}`}>
+            className={`gap-3 w-fit mb-5 text-white flex flex-row border justify-center items-center align-middle  font-body font-medium h-12 px-6 text-[14px] uppercase tracking-[1px] decorate-none border-white-7 bg-white-1 transition-all duration-300 ease-in-out hover:bg-primary-500 hover:border-primary-500 leading-3.5 ${className}`}>
             Download PDF
         </Link>
     )
 }
 
 
+export function ShelfCollection ({ children }: { children: ReactNode }) {
+    return (
+        <div className="w-full grid grid-cols-6 gap-9">{children}</div>
+    )
+}
+
+export function ShelfItem ({children}:{children: ReactNode}) {
+    return (
+        <div className="col-span-6 md:col-span-3 lg:col-span-2 shadow-xl"> {children}</div>
+    )
+}
 

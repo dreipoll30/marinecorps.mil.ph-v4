@@ -56,9 +56,9 @@ export function ArticleImage ({ children }: { children: ReactNode }) {
     )
 }
 
-export function GalleryImage ({ children }: { children: ReactNode }) {
+export function GalleryImage ({ children, className }: { children: ReactNode, className?:string }) {
     return (
-        <div className="z-1 relative flex justify-center items-center w-full h-auto duration-200 ease-in-out transforn group-hover:scale-105">
+        <div className={`z-1 relative flex justify-center items-center w-full h-auto duration-200 ease-in-out transforn group-hover:scale-105 ${className}`}>
             {children}
              <div className={`absolute inset-0 z-20 w-full h-full bg-linear-to-t from-slate-900/90 to-slate-900/20 opacity-100 transition-all duration-200 ease-in-out `} />
         </div>

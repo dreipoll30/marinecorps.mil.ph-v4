@@ -28,7 +28,6 @@ export function Gallery() {
     return (
         <Articles>
             {galleries.map((gallery, index) => (
-            
                 <ArticleItem 
                     key={index} 
                     className="border-2 rounded-sm px-2 py-px bg-gray-300!" 
