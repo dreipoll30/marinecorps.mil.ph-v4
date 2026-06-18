@@ -93,7 +93,7 @@ export function FeatureGrid({ items }) {
         <FeatureItem key={item.id} item={item} />
       ))}
     </div>
-  );
+  )
 }
 
 export function Features() {

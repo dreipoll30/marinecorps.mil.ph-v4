@@ -17,8 +17,6 @@ export function HorizontalDataGroup ({children, className}:VerticalDataGroupProp
 }
 
 
-
-
 interface DataStrongProps {
     children: ReactNode;
     className?: string;

@@ -28,7 +28,7 @@ export default function Page() {
           <SectionHeadingWrapper>
             <SectionHeading title="Recent CITEMAR6"/>
           </SectionHeadingWrapper>
-          <ShelfBlock>
+          <ShelfBlock >
             <Citemars />
           </ShelfBlock>
         </ShelfWrapper>

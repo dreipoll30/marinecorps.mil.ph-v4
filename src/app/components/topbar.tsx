@@ -53,12 +53,17 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
     const newsItems = [
         {
             label: "Marine Journal",
-            href: "/news/latest"
+            href: "/marine-journal"
 
         },
         {
             label: "Events",
-            href: "/Gender and Development"
+            href: "/events"
+
+        },
+        {
+            label: "Gender and Development",
+            href: "/gad"
 
         },
         {

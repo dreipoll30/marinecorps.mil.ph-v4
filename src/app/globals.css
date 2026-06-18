@@ -220,6 +220,14 @@ Converted to Plain CSS for Tailwind v4
     @apply relative text-white font-medium;
   }
 
+  ol {
+    @apply list-decimal list-inside mb-7;
+  }
+
+  ol li {
+    @apply font-body text-slate-600 leading-[1.6] m-0 p-0 text-[18px];
+  }
+
   ul {
     @apply list-outside mb-[20px] ml-[20px];
     list-style-type: circle;

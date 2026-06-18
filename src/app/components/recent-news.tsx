@@ -19,14 +19,14 @@ export default function RecentNews() {
                                 key={journal.id}
                                 href={`/`}
                             >
-                                <div className={`z-20 w-full absolute top-0 left-0 ml-6 mt-3 flex flex-col justify-start items-start min-[577px]:ml-9 min-[577px]:mt-6 ${isFirst ? 'block' : 'hidden'}`}>
-                                    <SectionHeading className="text-left mx-0! pt-[36px] text-white" title="Recent Stories" />
+                                <div className={`z-20 w-full absolute top-0 left-0 ml-6 mt-3 flex flex-col justify-start items-start sm:ml-9 sm:mt-6 ${isFirst ? 'block' : 'hidden'}`}>
+                                    <SectionHeading className="text-left mx-0! pt-9 text-white" title="Recent Stories" />
                                 </div>
                                 <StoriesDetails>
                                     <StoriesDate>{journal.date_posted}</StoriesDate>
                                     <StoriesTitle isFirst={isFirst}>{journal.title}</StoriesTitle>
                                     {isFirst && (
-                                        <Button variant='ghost' href='/' className="py-8 my-[12px]!">
+                                        <Button variant='ghost' href='/' className="py-8 my-3!">
                                             Continue Reading
                                             <IconArrowNarrowRight className="lg:w-6 lg:h-6 w-5 h-5 text-white" />
                                         </Button>
@@ -73,7 +73,7 @@ export function StoriesWrapper({ children }: { children: ReactNode }) {
 
 export function StoriesGrid({ children }: { children: ReactNode }) {
     return (
-        <div className="flex flex-col flex-nowrap w-full min-[577px]:grid min-[577px]:grid-cols-[60%_40%] min-[577px]:grid-rows-[50%_50%] min-[577px]:grid-flow-col min-[577px]:gap-px min-[577px]:h-full min-[577px]:overflow-hidden">{children}</div>
+        <div className="flex flex-col flex-nowrap w-full sm:grid sm:grid-cols-[60%_40%] sm:grid-rows-[50%_50%] sm:grid-flow-col sm:gap-px sm:h-full sm:overflow-hidden">{children}</div>
     )
 }
 
