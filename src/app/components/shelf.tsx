@@ -72,7 +72,7 @@ interface ShelfSlideDetailsProps {
     children?: ReactNode;
 }
 
-export function ShelfSlideDetails({ title, issue, href, className, children }: ShelfSlideDetailsProps) {
+export function ShelfSlideDetails({ title, issue, className, children }: ShelfSlideDetailsProps) {
     return (
         <div className={`absolute bottom-0 right-0 left-0 flex flex-col flex-nowrap items-center justify-end w-full h-full px-6 py-2 gap-6  bg-linear-to-b from-black/5  to-black ${className}`}>
             <h2 className="text-white text-center text-[20px] mb-0">

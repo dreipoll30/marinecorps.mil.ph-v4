@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export function Content({ children }: { children: React.ReactNode }) {
     return (
@@ -12,13 +12,18 @@ export function ContentWrapper({ children }: { children: React.ReactNode }) {
     )
 }
 
-export function ContentPanel({ children }: { children: React.ReactNode }) {
+interface ContentPanelProps {
+    children: ReactNode;
+    className?: string;
+    reverse?: boolean;
+}
+
+export function ContentPanel({ children, className, reverse}: ContentPanelProps) {
     return (
-        <div className="w-full grid grid-cols-1 gap-14  md:grid-cols-2">
+        <div className={`w-full grid grid-cols-1 gap-11 md:gap-18  mb-16 md:grid-cols-2 ${reverse ? "[&>*:first-child]:order-2 [&>*:last-child]:order-1" : ''} ${className}`}>
             {children}
         </div>
     )
-
 }
 
 export function ContentPanelBlock({ children }: { children: React.ReactNode }) {
@@ -32,6 +37,12 @@ export function ContentPanelBlock({ children }: { children: React.ReactNode }) {
 
 export function ImageCaption({ children }: { children: React.ReactNode }) {
     return (
-        <div className="z-2 absolute top-130 -left-10 w-75 p-6 h-auto uppercase text-white bg-secondary-500 border-b-2 border-white">{children}</div>
+        <div className="z-2 absolute bottom-8 -left-6 w-75 p-6 h-auto uppercase text-white bg-secondary-500 border-b-2 border-white">{children}</div>
+    )
+}
+
+export function JoinImageCaption({ children }: { children: React.ReactNode }) {
+    return (
+        <div className="z-2 absolute bottom-10 -left-6 w-80 p-6 h-auto  text-white bg-secondary-500 border-b-2 border-white">{children}</div>
     )
 }

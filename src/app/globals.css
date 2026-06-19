@@ -229,7 +229,7 @@ Converted to Plain CSS for Tailwind v4
   }
 
   ul {
-    @apply list-outside mb-[20px] ml-[20px];
+    @apply list-outside mb-[20px] ml-[20px] mb-[20px];
     list-style-type: circle;
   }
 

@@ -81,17 +81,17 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
     const joinItems = [
         {
             label: "Volunteer as a Marine",
-            href: "/careers/officers"
+            href: "/join/marines"
 
         },
         {
             label: "Join the Civilian Workforce",
-            href: "/careers/enlisted"
+            href: "/join/civilian"
 
         },
         {
             label: "Volunteer as Reservist",
-            href: "/careers/enlisted"
+            href: "/join/reservist"
 
         },
     ];
