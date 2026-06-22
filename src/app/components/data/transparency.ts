@@ -1,0 +1,1860 @@
+// ==========================================
+// 1. TYPE DEFINITIONS
+// ==========================================
+
+export type PMCCategory =
+  | "manilaCaviteArea"
+  | "operationsArea"
+  | "brigadeCommanders"
+  | "centralStaff"
+  | "specialStaff"
+  | "personalStaff"
+  | "technicalStaff"
+  | "marineFlagRanksGHQ_HPN"
+  | "commandLine";
+
+export interface Personnel {
+  id: string;
+  rank?: string;
+  name: string;
+  afpsn?: string | null;
+  branchOfService: string | null;
+  designation: string;
+}
+
+export interface StaffCategory {
+  heading: string; // Display title/heading for the section
+  members: Personnel[]; // Array of personnel belonging to this section
+}
+
+export interface PMCDataStructure {
+  categories: StaffCategory[]; // Now strictly typed as a flat array
+}
+
+// ==========================================
+// 2. POPULATED DATA STRUCTURE (ARRAY FORMAT)
+// ==========================================
+
+export const transparencyData: PMCDataStructure = {
+  categories: [
+    {
+      heading: "PMC Units ABD Manila/Cavite Area",
+      members: [
+        {
+          id: "mca-01",
+          rank: "COL",
+          name: "ALEXANDER G GIGANTONE",
+          branchOfService: "PN(M)(GSC)",
+          designation: "C, CDR (P)",
+        },
+        {
+          id: "mca-02",
+          rank: "COL",
+          name: "ARMANDO B CUSTODIO",
+          afpsn: "O-11563",
+          branchOfService: "PN(M)(GSC)",
+          designation: "S, MCFDC",
+        },
+        {
+          id: "mca-03",
+          rank: "LTCOL",
+          name: "ARTEMIO A RAYMUNDO JR",
+          afpsn: "O-132580",
+          branchOfService: "PN(M)(GSC)",
+          designation: "BC, MBGL",
+        },
+        {
+          id: "mca-04",
+          rank: "COL",
+          name: "BLADIMIER B CALUYA",
+          afpsn: "O-12342",
+          branchOfService: "PN(M)(GSC)",
+          designation: "C, SSR (P)",
+        },
+        {
+          id: "mca-05",
+          rank: "COL",
+          name: "ELOISE SOTERO C FABIAN JR",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "C, HHSG",
+        },
+        {
+          id: "mca-06",
+          rank: "LTCOL",
+          name: "HERMELINO E TUSI JR",
+          afpsn: "O-132775",
+          branchOfService: "PN(M)",
+          designation: "GC, MSE",
+        },
+        {
+          id: "mca-07",
+          rank: "LTCOL",
+          name: "MARY JANE A SALMIN",
+          afpsn: "O-131562",
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MCFC",
+        },
+        {
+          id: "mca-08",
+          rank: "LTCOL",
+          name: "NORMAN D REYES",
+          afpsn: "O-135562",
+          branchOfService: "PN(M)",
+          designation: "CO, SBADBn (P)",
+        },
+        {
+          id: "mca-09",
+          rank: "COL",
+          name: "RAMIL B DENSING",
+          afpsn: "O-12360",
+          branchOfService: "PN(M)(GSC)",
+          designation: "C, PMCSC",
+        },
+        {
+          id: "mca-10",
+          rank: "LTCOL",
+          name: "RAMIL L ANGCAP",
+          afpsn: "O-134858",
+          branchOfService: "PN(M)",
+          designation: "CO, 3MRBN",
+        },
+        {
+          id: "mca-11",
+          rank: "MAJ",
+          name: "ROD RYAN S ERIBAL",
+          afpsn: "O-15073",
+          branchOfService: "PN(M)",
+          designation: "CO, MCIBN",
+        },
+        {
+          id: "mca-12",
+          rank: "COL",
+          name: "ROMMEL B BOGŇALBAL",
+          afpsn: "O-13196",
+          branchOfService: "PN(M)(GSC)",
+          designation: "C, FRR",
+        },
+      ],
+    },
+    {
+      heading: "PMC Units ABD Operations Area",
+      members: [
+        {
+          id: "ops-01",
+          rank: "MAJ",
+          name: "ARIEL O DELOS SANTOS",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-10",
+        },
+        {
+          id: "ops-02",
+          rank: "LTCOL",
+          name: "ARNELL JOIE P ESTILLOTE",
+          afpsn: "O-14781",
+          branchOfService: "PN(M)",
+          designation: "CO, MCABBN",
+        },
+        {
+          id: "ops-03",
+          rank: "MAJ",
+          name: "DEJONNE E MARALLI",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-7",
+        },
+        {
+          id: "ops-04",
+          rank: "LTCOL",
+          name: "EDGAR S BERNARDO JR",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MBLT-1",
+        },
+        {
+          id: "ops-05",
+          rank: "LTCOL",
+          name: "FERDINAND O SARTO",
+          afpsn: "O-139566",
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MBLT-12",
+        },
+        {
+          id: "ops-06",
+          rank: "LTCOL",
+          name: "FRANCIS LEOMARIE T CONATO",
+          afpsn: "O-14783",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-11",
+        },
+        {
+          id: "ops-07",
+          rank: "LTCOL",
+          name: "HASIM A SALIH JR",
+          afpsn: "O-14838",
+          branchOfService: "PN(M)",
+          designation: "CO, FABN",
+        },
+        {
+          id: "ops-08",
+          rank: "LTCOL",
+          name: "JASON FRIAS",
+          branchOfService: "PN(M)",
+          designation: "CO, CEBN",
+        },
+        {
+          id: "ops-09",
+          rank: "LTCOL",
+          name: "JOHN A DELA CRUZ",
+          afpsn: "O-14326",
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MBLT-2",
+        },
+        {
+          id: "ops-10",
+          rank: "LTCOL",
+          name: "LLOYD IAN M CAGAMPAN",
+          branchOfService: "PN(M)",
+          designation: "CO, SBASMBN (P)",
+        },
+        {
+          id: "ops-11",
+          rank: "LTCOL",
+          name: "MA. ROWENA A MUYUELA",
+          afpsn: "O-136721",
+          branchOfService: "PN(M)",
+          designation: "CO, AABN",
+        },
+        {
+          id: "ops-12",
+          rank: "LTCOL",
+          name: "MARC WYN T UBALDO",
+          afpsn: "O-14533",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-8",
+        },
+        {
+          id: "ops-13",
+          rank: "LTCOL",
+          name: "NORBERTO G QUILATES",
+          afpsn: "O-134902",
+          branchOfService: "PN(M)",
+          designation: "CO, MBAA",
+        },
+        {
+          id: "ops-14",
+          rank: "LTCOL",
+          name: "RAFAEL A NARANJO",
+          afpsn: "O-14550",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-3",
+        },
+        {
+          id: "ops-15",
+          rank: "LTCOL",
+          name: "RAMIL R TAGPIS",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "CO, MTMBN",
+        },
+        {
+          id: "ops-16",
+          rank: "LTCOL",
+          name: "RICHARD C CORDERO",
+          afpsn: "O-135355",
+          branchOfService: "PN(M)",
+          designation: "CO, SSBN",
+        },
+        {
+          id: "ops-17",
+          rank: "LTCOL",
+          name: "RICHARD C MALABANAN",
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MBLT-4 (MarSec Bn)",
+        },
+        {
+          id: "ops-18",
+          rank: "MAJ",
+          name: "ROMMEL M GELI",
+          afpsn: "O-15163",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-9 (MARU)",
+        },
+        {
+          id: "ops-19",
+          rank: "LTCOL",
+          name: "ROMULO G DIMAYUGA II",
+          afpsn: "O-14170",
+          branchOfService: "PN(M)",
+          designation: "CO, MBLT-6 (MARU)",
+        },
+        {
+          id: "ops-20",
+          rank: "MAJ",
+          name: "VICTOR DJ DONQUE",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "CO, MBLT-5",
+        },
+      ],
+    },
+    {
+      heading: "PMC Brigade Commanders",
+      members: [
+        {
+          id: "bde-01",
+          rank: "BGEN",
+          name: "ARMANDO B CUSTODIO",
+          branchOfService: "PN(M)",
+          designation: "C, CSBde",
+        },
+        {
+          id: "bde-02",
+          rank: "BGEN",
+          name: "BAYANI V CURAMING",
+          afpsn: "O-11633",
+          branchOfService: "PN(M)",
+          designation: "C, 2MBDE",
+        },
+        {
+          id: "bde-03",
+          rank: "BGEN",
+          name: "BOB R APOSTOL",
+          afpsn: "O-11303",
+          branchOfService: "PN(M)",
+          designation: "C, 4MBDE",
+        },
+        {
+          id: "bde-04",
+          rank: "BGEN",
+          name: "LARRY C BATALLA",
+          branchOfService: "PN(M)",
+          designation: "C, 1MBDE",
+        },
+        {
+          id: "bde-05",
+          rank: "BGEN",
+          name: "ROBERT EMMANUEL T FELICIANO",
+          afpsn: null,
+          branchOfService: "PN(M)(RES)",
+          designation: "C, 7MBDE (RES)",
+        },
+        {
+          id: "bde-06",
+          rank: "BGEN",
+          name: "WILFREDO B MANALANG JR",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "C, 3MBDE",
+        },
+      ],
+    },
+    {
+      heading: "PMC Central Staff",
+      members: [
+        {
+          id: "cs-01",
+          rank: "LTCOL",
+          name: "BELINDA R FERRER",
+          afpsn: "O-132579",
+          branchOfService: "PN(M)(GSC)",
+          designation: "MC9",
+        },
+        {
+          id: "cs-02",
+          rank: "COL",
+          name: "CHARLIE A DOMINGO",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "AC of MS for Operations, MC3",
+        },
+        {
+          id: "cs-03",
+          rank: "COL",
+          name: "CLIFFORD NICKANOR P BASCO",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "AC of MS for Civil Military Operations, MC7",
+        },
+        {
+          id: "cs-04",
+          rank: "COL",
+          name: "CLIFFORD NICKANOR P BASCO",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "MC2",
+        },
+        {
+          id: "cs-05",
+          rank: "LTCOL",
+          name: "FRANCEL P MENDOZA",
+          afpsn: "0-135563",
+          branchOfService: "PN(M)",
+          designation: "MC4",
+        },
+        {
+          id: "cs-06",
+          rank: "COL",
+          name: "JULIUS T YNCIERTO",
+          afpsn: "O-134661",
+          branchOfService: "PN(M)(GSC)",
+          designation: "MC1",
+        },
+        {
+          id: "cs-07",
+          rank: "COL",
+          name: "KRISTINE B SALON",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "AC of MS for Repair & Maintenance Afloat, MC11",
+        },
+        {
+          id: "cs-08",
+          rank: "LTCOL",
+          name: "NOEL A GALLAZA",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "AC of MS for Financial Management, MC10",
+        },
+        {
+          id: "cs-09",
+          rank: "LTCOL",
+          name: "RONALDO U URBANO",
+          afpsn: "O-13955",
+          branchOfService: "PN(M)(GSC)",
+          designation: "MC6",
+        },
+        {
+          id: "cs-10",
+          rank: "COL",
+          name: "TINO P MASLAN",
+          afpsn: "O-13532",
+          branchOfService: "PN(M)(GSC)",
+          designation: "MC8",
+        },
+      ],
+    },
+    {
+      heading: "PMC Special Staff",
+      members: [
+        {
+          id: "ss-01",
+          rank: "Ms",
+          name: "Bonna Marie Y Zenarosa",
+          afpsn: null,
+          branchOfService: null,
+          designation: "Chief, CAB, MC1",
+        },
+        {
+          id: "ss-02",
+          rank: "CPT",
+          name: "CHRISTIAN MARK B PASCO",
+          afpsn: "O-15979",
+          branchOfService: "PN(M)",
+          designation: "D, MHO",
+        },
+        {
+          id: "ss-03",
+          rank: "CPT",
+          name: "EUNICE R KASAWALI",
+          afpsn: "O-142240",
+          branchOfService: "PN(M)",
+          designation: "MCADJ",
+        },
+        {
+          id: "ss-04",
+          rank: "MAJ",
+          name: "FELIX B CASINGCASING III",
+          afpsn: "O-137690",
+          branchOfService: "PN(M)",
+          designation: "MCPM",
+        },
+        {
+          id: "ss-05",
+          rank: "Atty.",
+          name: "Gee Marie G Galang",
+          afpsn: null,
+          branchOfService: null,
+          designation: "CPAFASU",
+        },
+        {
+          id: "ss-06",
+          rank: "CPT",
+          name: "JOBERT D JUDE",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "SGS",
+        },
+        {
+          id: "ss-07",
+          rank: "LTCOL",
+          name: "JOSE P DINGLASAN",
+          afpsn: "O-134909",
+          branchOfService: "PN(M)",
+          designation: "D, MOC",
+        },
+        {
+          id: "ss-08",
+          rank: "CPT",
+          name: "JOY B MEDINA",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "D, MCSSO",
+        },
+        {
+          id: "ss-09",
+          rank: "CPT",
+          name: "MARY-ANN S DOMACENA",
+          afpsn: "O-145406",
+          branchOfService: "PN(M)",
+          designation: "D, MCPAO",
+        },
+        {
+          id: "ss-10",
+          rank: "Mrs Ms",
+          name: "Ludivinia C Herrera, MPA",
+          afpsn: null,
+          branchOfService: null,
+          designation: "MCSAO",
+        },
+        {
+          id: "ss-11",
+          rank: "LCDR",
+          name: "NICKOMAR G NISPEROS",
+          afpsn: "O-141723",
+          branchOfService: "PN",
+          designation: "CEO",
+        },
+      ],
+    },
+    {
+      heading: "PMC Personal Staff",
+      members: [
+        {
+          id: "ps-01",
+          rank: "MAJ",
+          name: "CHERRYL P TINDOG",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "D, MCCLE",
+        },
+        {
+          id: "ps-02",
+          rank: "COL",
+          name: "EDWIN JOSEPH H OLAER",
+          afpsn: "O-11559",
+          branchOfService: "PN(M)(MNSA)",
+          designation: "MCIG",
+        },
+        {
+          id: "ps-03",
+          rank: "COL",
+          name: "OLIVER F BAYLON",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "Deputy OESPA, PMC",
+        },
+        {
+          id: "ps-04",
+          rank: "LTCOL",
+          name: "PAOLO JOSE M JANDUSAY",
+          afpsn: "O-14808",
+          branchOfService: "PN(M)",
+          designation: "Flag Secretary",
+        },
+        {
+          id: "ps-05",
+          rank: "LTCOL",
+          name: "REYNOLD C CUENCIA",
+          afpsn: null,
+          branchOfService: "PN(M)(GSC)",
+          designation: "MCIA",
+        },
+        {
+          id: "ps-06",
+          rank: "MAJ",
+          name: "RICHIE C LOPEZ",
+          afpsn: "O-141777",
+          branchOfService: "PN(M)",
+          designation: "C, MCREO",
+        },
+        {
+          id: "ps-07",
+          rank: "LTCOL",
+          name: "RODEL PACIFICO D NONO",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "D, MCSO",
+        },
+        {
+          id: "ps-08",
+          rank: "SMS",
+          name: "ROMMEL V CARBON",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "Command Sergeant Major, PMC",
+        },
+      ],
+    },
+    {
+      heading: "PMC Technical Staff",
+      members: [
+        {
+          id: "ts-01",
+          rank: "MAJ",
+          name: "CHRISTIAN O LAZARO",
+          afpsn: null,
+          branchOfService: "JAGS",
+          designation: "MCSJA",
+        },
+        {
+          id: "ts-02",
+          rank: "LTCOL",
+          name: "GENNIS D BERNAL",
+          afpsn: "O-134047",
+          branchOfService: "CHS",
+          designation: "MC Chaplain",
+        },
+        {
+          id: "ts-03",
+          rank: "COL",
+          name: "GRACE MARIE V GARCIA",
+          afpsn: "O-135463",
+          branchOfService: "MC(GSC)",
+          designation: "MCSG",
+        },
+      ],
+    },
+    {
+      heading: "Marine Flag Ranks ASGD GHQ, AFP / HPN",
+      members: [
+        {
+          id: "fr-01",
+          rank: "MGEN",
+          name: "DOROTEO JOSE M JALANDONI",
+          afpsn: "O-10495",
+          branchOfService: "PN(M)",
+          designation: "C, NRC",
+        },
+        {
+          id: "fr-02",
+          rank: "BGEN",
+          name: "EDWIN E AMADAR",
+          afpsn: "O-10640",
+          branchOfService: "PN(M)",
+          designation: "Vice Commander, Philippine Navy",
+        },
+        {
+          id: "fr-03",
+          rank: "BGEN",
+          name: "ERIC A MACAAMBAC",
+          afpsn: "O-11026",
+          branchOfService: "PN(M)",
+          designation: "C, JTF-NCR",
+        },
+        {
+          id: "fr-04",
+          rank: "BGEN",
+          name: "FERDINAND L MARCELINO",
+          afpsn: "O-11579",
+          branchOfService: "PN(M)",
+          designation: "TPMG, AFP",
+        },
+        {
+          id: "fr-05",
+          rank: "BGEN",
+          name: "FRANCISCO DOMINGO R FERNANDEZ",
+          afpsn: "O-10530",
+          branchOfService: "PN(M)",
+          designation: "D, AFPCC",
+        },
+        {
+          id: "fr-06",
+          rank: "MGEN",
+          name: "IVAN DR PAPERA",
+          afpsn: "O-11643",
+          branchOfService: "PN(M)",
+          designation: "C, AFPSEMO",
+        },
+        {
+          id: "fr-07",
+          rank: "LTGEN",
+          name: "JIMMY D LARIDA",
+          afpsn: "O-10554",
+          branchOfService: "PN(M)",
+          designation: "TDCSAFP",
+        },
+        {
+          id: "fr-08",
+          rank: "MGEN",
+          name: "SIMPLITIUS G ADECER",
+          afpsn: "O-11660",
+          branchOfService: "PN(M)",
+          designation: "DC, AFPIC",
+        },
+      ],
+    },
+    {
+      heading: "PMC Command Line",
+      members: [
+        {
+          id: "cl-01",
+          rank: "BGEN",
+          name: "ENSTEIN B CALAOA JR",
+          afpsn: "O-11665",
+          branchOfService: "PN(M)",
+          designation: "CMS, PMC",
+        },
+        {
+          id: "cl-02",
+          rank: "BGEN",
+          name: "GIERAM R ARAGONES",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "DEPUTY COMMANDANT",
+        },
+        {
+          id: "cl-03",
+          rank: "SMS",
+          name: "ROMMEL V CARBON",
+          afpsn: null,
+          branchOfService: "PN(M)",
+          designation: "Command Sergeant Major, PMC",
+        },
+        {
+          id: "cl-04",
+          rank: "MGEN",
+          name: "VICENTE MAP BLANCO III",
+          afpsn: "O-10496",
+          branchOfService: "PN(M)",
+          designation: "Commandant, PMC",
+        },
+      ],
+    },
+  ],
+};
+
+export interface TransparencyReport {
+  id: string;
+  categoryName: string;
+  items: {
+    title: string;
+    files: {
+      name: string;
+      createdAt: string; // Parseable date string for moment()
+      size: number; // Byte number for numeral()
+      path: string;
+    }[];
+  }[];
+}
+
+export const reports: TransparencyReport[] = [
+  // {
+  //     heading: "FAR No. 1 (SAAOBDB) Statement of Appropriations, Allotments, Obligations, Disbursement and Balances",
+  //     item: [
+  //         {
+  //             title: "SAAODB FY 2023",
+  //             datePosted: "Posted on September 20, 2024",
+  //             fileSize: " 602.0 KB"
+  //         },
+  //     ],
+  // },
+  // {
+  //     heading: "FAR No. 4 - Summary Report on Disbursement, Obligations, Disbursement and Balances",
+  //     item: [
+  //         {
+  //             title: "FY 2023 (January - June)",
+  //             datePosted: "Posted on September 20, 2024",
+  //             fileSize: " 602.0 KB"
+  //         },
+  //     ],
+  // },
+  {
+    id: "fin-01",
+    categoryName: "Annual Financial Reports",
+    items: [
+      {
+        title:
+          "FAR No. 1 (SAAOBDB) Statement of Appropriations, Allotments, Obligations, Disbursement and Balances",
+        files: [
+          {
+            name: "SAAODB FY 2023",
+            createdAt: "2024-09-20",
+            size: 602 * 1024,
+            path: "/downloads/saaodb-fy-2023.pdf",
+          },
+        ],
+      },
+      {
+        title: "FAR No. 4 - Summary Report on Disbursement",
+        files: [
+          {
+            name: "FY 2023 (January - June)",
+            createdAt: "2024-09-20",
+            size: 641 * 1024,
+            path: "/downloads/far4-fy-2023.pdf",
+          },
+        ],
+      },
+      {
+        title: "BAR No. 1 - Quarterly Physical Report of Operations",
+        files: [
+          {
+            name: "BAR No.1 FY 2022",
+            createdAt: "2024-09-20",
+            size: 519 * 1024,
+            path: "/downloads/bar1-fy-2022.pdf",
+          },
+          {
+            name: "BED No.2 FY 2022",
+            createdAt: "2024-09-20",
+            size: 96.2 * 1024,
+            path: "/downloads/bed2-fy-2022.pdf",
+          },
+        ],
+      },
+      {
+        title: "FAR No. 5 - Quarterly Report on Revenue and Other Receipts",
+        files: [
+          {
+            name: "FY 2023 (January - June)",
+            createdAt: "2024-09-20",
+            size: 289.4 * 1024,
+            path: "/downloads/far5-fy-2023.pdf",
+          },
+        ],
+      },
+      {
+        title: "Financial Plan",
+        files: [
+          {
+            name: "FY 2022",
+            createdAt: "2024-09-20",
+            size: 234.8 * 1024,
+            path: "/downloads/financial-plan-fy-2022.pdf",
+          },
+        ],
+      },
+      {
+        title: "Contract of Agreement",
+        files: [
+          {
+            name: "CA-Supply and Delivery of Parts and Materials for the Preventive Maintenance",
+            createdAt: "2025-11-06",
+            size: 343 * 1024,
+            path: "/downloads/ca-preventive-maintenance.pdf",
+          },
+          {
+            name: "Procurement of SIGNIT",
+            createdAt: "2026-01-22",
+            size: 730.9 * 1024,
+            path: "/downloads/ca-procurement-signit.pdf",
+          },
+          {
+            name: "Supply and Delivery Semi-Expandable Support, Safety, and Security Equipment",
+            createdAt: "2026-01-22",
+            size: 740.6 * 1024,
+            path: "/downloads/ca-support-safety-equipment.pdf",
+          },
+        ],
+      },
+      {
+        title: "Supplemental Bid Bulletin",
+        files: [
+          {
+            name: "Supply and Delivery of Continuous Paper for Printing of Payroll and Payslip",
+            createdAt: "2025-11-06",
+            size: 292.9 * 1024,
+            path: "/downloads/sbb-continuous-paper.pdf",
+          },
+          {
+            name: "Procurement of SCUBA Equipment (GS-PMCBAC-2025-11)",
+            createdAt: "2025-12-11",
+            size: 313 * 1024,
+            path: "/downloads/sbb-scuba-equipment.pdf",
+          },
+          {
+            name: "Procurement of Modular Tent (GS-PMCBAC-2025-13)",
+            createdAt: "2025-12-11",
+            size: 135.6 * 1024,
+            path: "/downloads/sbb-modular-tent.pdf",
+          },
+          {
+            name: "CS SBB nr.1 - Supply and Delivery of Services for Creation of Master Development Plan",
+            createdAt: "2026-05-04",
+            size: 234.2 * 1024,
+            path: "/downloads/sbb-master-development-plan.pdf",
+          },
+          {
+            name: "C4ISR SBB nr.1 - Payment for VSAT Satellite Internet Subscription of PMC Units",
+            createdAt: "2026-05-14",
+            size: 227.4 * 1024,
+            path: "/downloads/sbb-vsat-subscription.pdf",
+          },
+          {
+            name: "GMRS SBB - Supply and Delivery of Parts and Services for Depot Level Repair of Military Trucks",
+            createdAt: "2026-05-14",
+            size: 133.1 * 1024,
+            path: "/downloads/sbb-trucks-repair.pdf",
+          },
+          {
+            name: "GS SBB nr.1 - Supply and Delivery of CCIE Requirements, Lot 3-Rain Jacket",
+            createdAt: "2026-05-20",
+            size: 260.9 * 1024,
+            path: "/downloads/sbb-rain-jacket.pdf",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "fin-02",
+    categoryName: "DBM Approved Budget and Targets",
+    items: [
+      {
+        title: "Approved Budget and Targets 2023",
+        files: [
+          {
+            name: "Approved Budget FY 2023",
+            createdAt: "2024-09-20",
+            size: 151.2 * 1024,
+            path: "/downloads/approved-budget-fy-2023.pdf",
+          },
+          {
+            name: "Approved Targets FY 2023",
+            createdAt: "2024-09-20",
+            size: 110.4 * 1024,
+            path: "/downloads/approved-targets-fy-2023.pdf",
+          },
+        ],
+      },
+      {
+        title: "Notice of Award",
+        files: [
+          {
+            name: "05. NOA - Procurement and Installation of Transformer with Complete Accessories and Line Hardware",
+            createdAt: "2025-10-03",
+            size: 215.5 * 1024,
+            path: "/downloads/noa-transformer.pdf",
+          },
+          {
+            name: "Procurement of Military Radios",
+            createdAt: "2025-11-06",
+            size: 649.1 * 1024,
+            path: "/downloads/noa-military-radios.pdf",
+          },
+          {
+            name: "Construction of Female Barracks",
+            createdAt: "2025-11-06",
+            size: 226.1 * 1024,
+            path: "/downloads/noa-female-barracks.pdf",
+          },
+          {
+            name: "Mr. Asnawi L. Sanzo, Medtrends Distributors Corp.",
+            createdAt: "2025-12-11",
+            size: 227.9 * 1024,
+            path: "/downloads/noa-medtrends.pdf",
+          },
+          {
+            name: "Notice of Award Ms. Evelyn B Ebora Buennelyn Gen Merchandise",
+            createdAt: "2025-12-11",
+            size: 226.6 * 1024,
+            path: "/downloads/noa-buennelyn.pdf",
+          },
+          {
+            name: "Mr. Venancio M Gatdula Mirasol M Medina Construction and Trading",
+            createdAt: "2025-12-11",
+            size: 218.4 * 1024,
+            path: "/downloads/noa-medina-construction.pdf",
+          },
+          {
+            name: "NOA-Construction of Commanders Quarters and Office",
+            createdAt: "2026-01-19",
+            size: 222.2 * 1024,
+            path: "/downloads/noa-commanders-quarters.pdf",
+          },
+          {
+            name: "Procurement of ICT Equipment",
+            createdAt: "2026-01-19",
+            size: 215.9 * 1024,
+            path: "/downloads/noa-ict-equipment.pdf",
+          },
+          {
+            name: "Procurement of Quartermaster",
+            createdAt: "2026-01-19",
+            size: 223.1 * 1024,
+            path: "/downloads/noa-quartermaster.pdf",
+          },
+          {
+            name: "Procurement of Float Engine for PMC Floating Assets",
+            createdAt: "2026-02-05",
+            size: 449.4 * 1024,
+            path: "/downloads/noa-float-engine.pdf",
+          },
+          {
+            name: "Supply and Delivery of Drugs and Medicines",
+            createdAt: "2026-02-05",
+            size: 451.3 * 1024,
+            path: "/downloads/noa-drugs-medicines.pdf",
+          },
+          {
+            name: "Supply and Delivery of Medical Supplies",
+            createdAt: "2026-02-05",
+            size: 442.6 * 1024,
+            path: "/downloads/noa-medical-supplies.pdf",
+          },
+          {
+            name: "Procurement of Explosive Ordnance Disposal",
+            createdAt: "2026-02-09",
+            size: 449.8 * 1024,
+            path: "/downloads/noa-eod.pdf",
+          },
+          {
+            name: "Procurement of Individual Clothing Requirements for Candidate Soldier Lot 1 - Combat",
+            createdAt: "2026-02-09",
+            size: 448.5 * 1024,
+            path: "/downloads/noa-clothing-lot1.pdf",
+          },
+          {
+            name: "Procurement of Semi-Expendable Technical and Scientific Equipment",
+            createdAt: "2026-02-09",
+            size: 443.3 * 1024,
+            path: "/downloads/noa-technical-equipment.pdf",
+          },
+          {
+            name: "Supply and Delivery of Parts for the Maintenance Requirements of Amphibious Assault Vehicle (AAV)",
+            createdAt: "2026-02-09",
+            size: 448.6 * 1024,
+            path: "/downloads/noa-aav-maintenance.pdf",
+          },
+          {
+            name: "Procurement of Mobile Radar System for Maritime Domain Awareness",
+            createdAt: "2026-02-09",
+            size: 450.0 * 1024,
+            path: "/downloads/noa-mobile-radar.pdf",
+          },
+          {
+            name: "Payment for Satellite Phone Prepaid Load of PMC",
+            createdAt: "2026-02-12",
+            size: 446.8 * 1024,
+            path: "/downloads/noa-satellite-prepaid.pdf",
+          },
+          {
+            name: "Supply and Delivery of OPTAR",
+            createdAt: "2026-02-12",
+            size: 453.0 * 1024,
+            path: "/downloads/noa-optar.pdf",
+          },
+          {
+            name: "Procurement of 3D Wall-Penetrating Radar",
+            createdAt: "2026-02-12",
+            size: 436.6 * 1024,
+            path: "/downloads/noa-3d-radar.pdf",
+          },
+          {
+            name: "Supply and Delivery of Student Requirements for the Conduct of Career and Specialization Courses",
+            createdAt: "2026-02-12",
+            size: 454.3 * 1024,
+            path: "/downloads/noa-student-courses.pdf",
+          },
+          {
+            name: "Supply and Delivery of OPTAR 72-100 Requirements of PMC Lot 2 - Office Supplies Expenses",
+            createdAt: "2026-02-12",
+            size: 447.7 * 1024,
+            path: "/downloads/noa-optar-office-supplies.pdf",
+          },
+          {
+            name: "Supply and Delivery of Parts and Materials for the Preventive Maintenance (PMS) of Patrol Riverine Craft",
+            createdAt: "2026-02-12",
+            size: 448.8 * 1024,
+            path: "/downloads/noa-riverine-maintenance.pdf",
+          },
+          {
+            name: "Procurement of Float Engine for PMC Floating Assets Lot -1 Procurement of Float Engine for SURC of MCABBN (MR-PMCBAC-2026-04)",
+            createdAt: "2026-03-26",
+            size: 432.2 * 1024,
+            path: "/downloads/noa-float-engine-surc.pdf",
+          },
+          {
+            name: "NOA - Supply and Delivery of Military Police and Traffic Supplies",
+            createdAt: "2026-03-26",
+            size: 443.5 * 1024,
+            path: "/downloads/noa-mp-traffic-supplies.pdf",
+          },
+          {
+            name: "Construction of Mission Essential Facilities (2MBDe)",
+            createdAt: "2026-05-11",
+            size: 228.4 * 1024,
+            path: "/downloads/noa-facilities-2mbde.pdf",
+          },
+          {
+            name: "NOA - Procurement of ICT Equipment of HPMC Staff",
+            createdAt: "2026-05-14",
+            size: 223.5 * 1024,
+            path: "/downloads/noa-hpmc-ict.pdf",
+          },
+          {
+            name: "NOA - Construction of Mission Essential Facilities (Construction of Two (2) Storey Barracks)",
+            createdAt: "2026-05-22",
+            size: 676.3 * 1024,
+            path: "/downloads/noa-two-storey-barracks.pdf",
+          },
+          {
+            name: "NOA - Construction of Mission Essential Facilities (Construction of Mission Essential Facilities of 4MDBE)",
+            createdAt: "2026-05-22",
+            size: 723.0 * 1024,
+            path: "/downloads/noa-facilities-4mdbe.pdf",
+          },
+          {
+            name: "NOA - Construction of Mission Essential Facilities (Construction of Mission Essential Facilities of 3MBDe)",
+            createdAt: "2026-06-02",
+            size: 653.9 * 1024,
+            path: "/downloads/noa-facilities-3mbde.pdf",
+          },
+          {
+            name: "NOA - Payment for VSAT Satellite Internet Subscription Expenses of PMC Units",
+            createdAt: "2026-06-02",
+            size: 627.8 * 1024,
+            path: "/downloads/noa-vsat-subscription.pdf",
+          },
+          {
+            name: "NOA - Supply and Delivery of Parts and Services for Depot Level Repair of Military Trucks",
+            createdAt: "2026-06-16",
+            size: 646.1 * 1024,
+            path: "/downloads/noa-trucks-depot-repair.pdf",
+          },
+        ],
+      },
+      {
+        title: "Procurement Resolutions",
+        files: [
+          {
+            name: "05. RESO - Procurement and Installation of Transformer with Complete Accessories and Line Hardware",
+            createdAt: "2025-10-03",
+            size: 734.2 * 1024,
+            path: "/downloads/reso-transformer.pdf",
+          },
+          {
+            name: "Construction of Armory",
+            createdAt: "2025-11-06",
+            size: 477.0 * 1024,
+            path: "/downloads/reso-armory.pdf",
+          },
+          {
+            name: "Reso Mr. Venancio M Gatdula Mirasol M Medina Construction and Trading",
+            createdAt: "2025-12-11",
+            size: 889.6 * 1024,
+            path: "/downloads/reso-medina-construction.pdf",
+          },
+          {
+            name: "Declaring G. Danz Builders Corps as Winning Bidder",
+            createdAt: "2026-01-19",
+            size: 452.4 * 1024,
+            path: "/downloads/reso-winning-bidder-danz.pdf",
+          },
+          {
+            name: "RESO-Procurement of ICT Equipment",
+            createdAt: "2026-01-19",
+            size: 451.3 * 1024,
+            path: "/downloads/reso-ict-equipment.pdf",
+          },
+          {
+            name: "RESO-Procurement of SCUBA Equipment",
+            createdAt: "2026-01-19",
+            size: 452.7 * 1024,
+            path: "/downloads/reso-scuba-equipment.pdf",
+          },
+          {
+            name: "Procurement",
+            createdAt: "2026-01-19",
+            size: 210.3 * 1024,
+            path: "/downloads/reso-procurement-general.pdf",
+          },
+          {
+            name: "Procurement of Quartermaster",
+            createdAt: "2026-01-19",
+            size: 526.8 * 1024,
+            path: "/downloads/reso-quartermaster.pdf",
+          },
+          {
+            name: "Supply and Delivery of Medical Supplies",
+            createdAt: "2026-02-05",
+            size: 903.7 * 1024,
+            path: "/downloads/reso-medical-supplies.pdf",
+          },
+          {
+            name: "Supply and Delivery of Drugs and Medicines",
+            createdAt: "2026-02-05",
+            size: 1.4 * 1024 * 1024,
+            path: "/downloads/reso-drugs-medicines.pdf",
+          },
+          {
+            name: "Procurement of Float Engine for PMC Floating Assets",
+            createdAt: "2026-02-05",
+            size: 932.2 * 1024,
+            path: "/downloads/reso-float-engine.pdf",
+          },
+          {
+            name: "Procurement of Explosive Ordnance Disposal (EOD)",
+            createdAt: "2026-02-09",
+            size: 979.2 * 1024,
+            path: "/downloads/reso-eod.pdf",
+          },
+          {
+            name: "Procurement of Individual Clothing Requirements for Candidate Soldier Lot 1",
+            createdAt: "2026-02-09",
+            size: 958.1 * 1024,
+            path: "/downloads/reso-clothing-lot1.pdf",
+          },
+          {
+            name: "Procurement of Semi-Expendable Technical and Scientific Equipment",
+            createdAt: "2026-02-09",
+            size: 959.7 * 1024,
+            path: "/downloads/reso-technical-equipment.pdf",
+          },
+          {
+            name: "RESO - Supply and Delivery of Parts for the Maintenance Requirements of Amphibious Assault Vehicle (AAV)",
+            createdAt: "2026-02-09",
+            size: 1.1 * 1024 * 1024,
+            path: "/downloads/reso-aav-maintenance.pdf",
+          },
+          {
+            name: "Procurement of Mobile Radar System for Maritime Domain Awareness",
+            createdAt: "2026-02-09",
+            size: 938.4 * 1024,
+            path: "/downloads/reso-mobile-radar.pdf",
+          },
+          {
+            name: "Payment for Satellite Phone Prepaid Load of PMC",
+            createdAt: "2026-02-12",
+            size: 922.7 * 1024,
+            path: "/downloads/reso-satellite-prepaid.pdf",
+          },
+          {
+            name: "Supply and Delivery of OPTAR",
+            createdAt: "2026-02-12",
+            size: 897.0 * 1024,
+            path: "/downloads/reso-optar.pdf",
+          },
+          {
+            name: "Procurement of 3D Wall-Penetrating Radar",
+            createdAt: "2026-02-12",
+            size: 878.6 * 1024,
+            path: "/downloads/reso-3d-radar.pdf",
+          },
+          {
+            name: "Supply and Delivery of Student Requirements for the Conduct of Career and Specialization Courses",
+            createdAt: "2026-02-12",
+            size: 944.4 * 1024,
+            path: "/downloads/reso-student-courses.pdf",
+          },
+          {
+            name: "Supply and Delivery of OPTAR 72-100 Requirements of PMC Lot 2 - Office Supplies Expenses (Doc A)",
+            createdAt: "2026-02-12",
+            size: 925.0 * 1024,
+            path: "/downloads/reso-optar-office-supplies-a.pdf",
+          },
+          {
+            name: "Supply and Delivery of OPTAR 72-100 Requirements of PMC Lot 2 - Office Supplies Expenses (Doc B)",
+            createdAt: "2026-02-12",
+            size: 983.7 * 1024,
+            path: "/downloads/reso-optar-office-supplies-b.pdf",
+          },
+          {
+            name: "Procurement of Individual Clothing Requirements for Candidate Soldier, Lot 3 - PMC Pixelized Battle Dress Uniform (PBDU)",
+            createdAt: "2026-03-26",
+            size: 984.5 * 1024,
+            path: "/downloads/reso-pbdu-clothing.pdf",
+          },
+          {
+            name: "RESO - Supply and Delivery of Military Police and Traffic Supplies",
+            createdAt: "2026-03-26",
+            size: 935.9 * 1024,
+            path: "/downloads/reso-mp-traffic.pdf",
+          },
+          {
+            name: "RESO - Construction of Mission Essential Facilities (2MBDe)",
+            createdAt: "2026-05-11",
+            size: 445.6 * 1024,
+            path: "/downloads/reso-facilities-2mbde.pdf",
+          },
+          {
+            name: "RESO - Procurement of ICT Equipment of HPMC Staff",
+            createdAt: "2026-05-14",
+            size: 451.1 * 1024,
+            path: "/downloads/reso-hpmc-ict.pdf",
+          },
+          {
+            name: "RESO - Construction of Mission Essential Facilities (Construction of Two (2) Storey Barracks)",
+            createdAt: "2026-05-22",
+            size: 1.6 * 1024 * 1024,
+            path: "/downloads/reso-two-storey-barracks.pdf",
+          },
+          {
+            name: "RESO - Construction of Mission Essential Facilities (Construction of Mission Essential Facilities of 4MDBE)",
+            createdAt: "2026-05-22",
+            size: 1.3 * 1024 * 1024,
+            path: "/downloads/reso-facilities-4mdbe.pdf",
+          },
+          {
+            name: "RESO - Construction of Mission Essential Facilities (Construction of Mission Essential Facilities of 3MBDe)",
+            createdAt: "2026-06-02",
+            size: 1.4 * 1024 * 1024,
+            path: "/downloads/reso-facilities-3mbde.pdf",
+          },
+          {
+            name: "RESO - Payment for VSAT Satellite Internet Subscription Expenses of PMC Units",
+            createdAt: "2026-06-02",
+            size: 1.5 * 1024 * 1024,
+            path: "/downloads/reso-vsat-subscription.pdf",
+          },
+          {
+            name: "RESO - Supply and Delivery of Parts and Services for Depot Level Repair of Military Trucks",
+            createdAt: "2026-06-16",
+            size: 1.6 * 1024 * 1024,
+            path: "/downloads/reso-trucks-depot-repair.pdf",
+          },
+        ],
+      },
+      {
+        title: "Invitation to Bid",
+        files: [
+          {
+            name: "05.. GS ITB (RB-3)- Procurement of Individual Clothing Requirements for Candidate Soldier Lot 3",
+            createdAt: "2025-10-03",
+            size: 372.0 * 1024,
+            path: "/downloads/itb-clothing-lot3.pdf",
+          },
+          {
+            name: "Procurement of Modular Tent",
+            createdAt: "2025-11-06",
+            size: 370.9 * 1024,
+            path: "/downloads/itb-modular-tent.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Admin Vehicles for PMC Re-fleeting Program (GMRS-PMCBAC-2026-04)",
+            createdAt: "2025-12-11",
+            size: 133.4 * 1024,
+            path: "/downloads/itb-admin-vehicles.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Supply and Delivery of Students Requirements for Career and Specialization Courses (GS-PMCBAC-2026-06)",
+            createdAt: "2025-12-11",
+            size: 128.2 * 1024,
+            path: "/downloads/itb-student-requirements.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Mobile Radar System for Maritime Domain Awareness (C4ISR-PMCBAC-2025-21)",
+            createdAt: "2025-12-11",
+            size: 218.4 * 1024,
+            path: "/downloads/itb-mobile-radar.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Sustainment of PMC Maritime Domain Awareness Suite Subscription (C4ISR-PMCBAC-2025-22)",
+            createdAt: "2025-12-11",
+            size: 136.3 * 1024,
+            path: "/downloads/itb-mda-subscription.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Supply and Delivery for the Operational Repair of C4ISR Equipment (C4ISR-PMCBAC-2025-23)",
+            createdAt: "2025-12-11",
+            size: 128.1 * 1024,
+            path: "/downloads/itb-c4isr-repair.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of ICT Equipment (C4ISR-PMCBAC-2025-24)",
+            createdAt: "2025-12-11",
+            size: 126.1 * 1024,
+            path: "/downloads/itb-ict-equipment.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of ICT Equipment of HPMC Staff (C4ISR-PMCBAC-2025-25)",
+            createdAt: "2025-12-11",
+            size: 127.2 * 1024,
+            path: "/downloads/itb-hpmc-ict.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Construction of Modular Type Barracks INFRA-PMCBAC-2025-11",
+            createdAt: "2025-12-11",
+            size: 218.0 * 1024,
+            path: "/downloads/itb-modular-barracks.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Construction of Commanders Quarters and Office INFRA-PMCBAC-2025-12",
+            createdAt: "2025-12-11",
+            size: 218.8 * 1024,
+            path: "/downloads/itb-commanders-office.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Individual Clothing Requirements for Candidate Soldier (GS-PMCBAC-2026-04)",
+            createdAt: "2025-12-11",
+            size: 130.4 * 1024,
+            path: "/downloads/itb-candidate-clothing.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Tires and Batteries for Admin Vehicles (GMRS-PMCBAC-2026-02)",
+            createdAt: "2025-12-11",
+            size: 134.8 * 1024,
+            path: "/downloads/itb-admin-tires.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Semi-Expendable Technical and Scientific Equipment (C4ISR-PMCBAC-2026-03)",
+            createdAt: "2025-12-11",
+            size: 233.7 * 1024,
+            path: "/downloads/itb-scientific-equipment.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement Explosive Ordnance Disposal (EOD) Equipment (C4ISR-PMCBAC-2026-04) - Copy A",
+            createdAt: "2025-12-11",
+            size: 134.1 * 1024,
+            path: "/downloads/itb-eod-equipment-a.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement Explosive Ordnance Disposal (EOD) Equipment (C4ISR-PMCBAC-2026-04) - Copy B",
+            createdAt: "2025-12-11",
+            size: 134.1 * 1024,
+            path: "/downloads/itb-eod-equipment-b.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of 3D Wall Penetrating Radar (C4ISR-PMCBAC-2026-01)",
+            createdAt: "2025-12-11",
+            size: 137.4 * 1024,
+            path: "/downloads/itb-3d-radar.pdf",
+          },
+          {
+            name: "INVITATION TO BID FOR Procurement of Tires and Batteries for Military Trucks (GMRS-PMCBAC-2026-03)",
+            createdAt: "2025-12-11",
+            size: 135.1 * 1024,
+            path: "/downloads/itb-truck-tires.pdf",
+          },
+          {
+            name: "Procurement of SCUBA Equipment",
+            createdAt: "2025-12-11",
+            size: 135.6 * 1024,
+            path: "/downloads/itb-scuba-equipment.pdf",
+          },
+          {
+            name: "C4ISR ITB - Payment for Satellite Internet Subscription of PMC Units",
+            createdAt: "2026-05-04",
+            size: 405.2 * 1024,
+            path: "/downloads/itb-satellite-internet.pdf",
+          },
+          {
+            name: "GMRS ITB - Supply and Delivery of Parts and Services for Depot Level Repair of Military Trucks",
+            createdAt: "2026-05-04",
+            size: 150.6 * 1024,
+            path: "/downloads/itb-truck-depot-repair.pdf",
+          },
+          {
+            name: "GS ITB - Procurement of Renewable Source Energy",
+            createdAt: "2026-05-04",
+            size: 504.8 * 1024,
+            path: "/downloads/itb-renewable-energy.pdf",
+          },
+          {
+            name: "GS LOI - Supply and Delivery of CCIE requirements Lot-3 Rain Jacket",
+            createdAt: "2026-05-08",
+            size: 196.1 * 1024,
+            path: "/downloads/loi-rain-jacket.pdf",
+          },
+          {
+            name: "INFRA ITB - Construction of Modular Type Office",
+            createdAt: "2026-06-01",
+            size: 238.0 * 1024,
+            path: "/downloads/itb-modular-office-a.pdf",
+          },
+          {
+            name: "INFRA ITB - Construction of Mission Essential Facilities at MBGL",
+            createdAt: "2026-06-01",
+            size: 237.6 * 1024,
+            path: "/downloads/itb-facilities-mbgl-a.pdf",
+          },
+          {
+            name: "GS ITB - Procurement of Three (3) Units Towable Fuel Storage Tank",
+            createdAt: "2026-06-01",
+            size: 349.8 * 1024,
+            path: "/downloads/itb-fuel-tanks.pdf",
+          },
+          {
+            name: "INFRA ITB - Construction of Mission Essential Facilities at MBGL (1)",
+            createdAt: "2026-06-02",
+            size: 237.9 * 1024,
+            path: "/downloads/itb-facilities-mbgl-b.pdf",
+          },
+          {
+            name: "INFRA ITB - Construction of Modular Type Office (2)",
+            createdAt: "2026-06-02",
+            size: 238.6 * 1024,
+            path: "/downloads/itb-modular-office-b.pdf",
+          },
+          {
+            name: "INFRA ITB - Construction of Modular Type Office (3)",
+            createdAt: "2026-06-02",
+            size: 238.6 * 1024,
+            path: "/downloads/itb-modular-office-c.pdf",
+          },
+          {
+            name: "C4ISR ITB - Supply and Delivery of Parts for the Repair and Maintenance of C4ISR Equipment of Armored Assets of PMC Units",
+            createdAt: "2026-06-15",
+            size: 283.1 * 1024,
+            path: "/downloads/itb-armored-assets-repair.pdf",
+          },
+          {
+            name: "C4ISR ITB - Supply and Delivery of Semi Expendable ICT Equipment",
+            createdAt: "2026-06-15",
+            size: 234.4 * 1024,
+            path: "/downloads/itb-semi-expendable-ict.pdf",
+          },
+          {
+            name: "GS ITB - Procurement of SCUBA Equipment",
+            createdAt: "2026-06-15",
+            size: 346.0 * 1024,
+            path: "/downloads/itb-scuba-equipment-june.pdf",
+          },
+          {
+            name: "GS ITB - Procurement of Modular Tent",
+            createdAt: "2026-06-15",
+            size: 344.5 * 1024,
+            path: "/downloads/itb-modular-tent-june.pdf",
+          },
+        ],
+      },
+      {
+        title: "Request Expression of Interest",
+        files: [
+          {
+            name: "SUPPLY AND DELIVERY OF SERVICES FOR CREATION OF MASTER DEVELOPMENT OF MARINE BASE GREGORIO LIM",
+            createdAt: "2025-12-11",
+            size: 404.4 * 1024,
+            path: "/downloads/reoi-master-development.pdf",
+          },
+        ],
+      },
+      {
+        title: "Notice to Proceed",
+        files: [
+          {
+            name: "Supply and Delivery Semi-Expandable Support",
+            createdAt: "2026-01-22",
+            size: 345.5 * 1024,
+            path: "/downloads/ntp-semi-expandable.pdf",
+          },
+          {
+            name: "Procurement of SIGNIT",
+            createdAt: "2026-01-22",
+            size: 337.1 * 1024,
+            path: "/downloads/ntp-signit.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Medical Equipment",
+            createdAt: "2026-05-28",
+            size: 517.1 * 1024,
+            path: "/downloads/ntp-medical-equipment.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Medical Equipment",
+            createdAt: "2026-05-28",
+            size: 1.1 * 1024 * 1024,
+            path: "/downloads/ca-medical-equipment.pdf",
+          },
+          {
+            name: "CA - Procurement of Individual Clothing Requirements for Candidate Soldier Lot 3b - Other Clothing Requirements",
+            createdAt: "2026-05-28",
+            size: 1.4 * 1024 * 1024,
+            path: "/downloads/ca-clothing-lot3b.pdf",
+          },
+          {
+            name: "NTP- Procurement of Individual Clothing Requirements for Candidate Soldier Lot 3b - Other Clothing Requirements",
+            createdAt: "2026-05-28",
+            size: 645.4 * 1024,
+            path: "/downloads/ntp-clothing-lot3b.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Military Police and Traffic Supplies",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-mp-traffic.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Drugs and Medicines",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-drugs-medicines.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Drugs and Medicines",
+            createdAt: "2026-05-28",
+            size: 538.1 * 1024,
+            path: "/downloads/ntp-drugs-medicines.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Military Police and Traffic Supplies",
+            createdAt: "2026-05-28",
+            size: 598.3 * 1024,
+            path: "/downloads/ntp-mp-traffic.pdf",
+          },
+          {
+            name: "CA - Procurement of Tires and Batteries for Admin Vehicles",
+            createdAt: "2026-05-28",
+            size: 811.7 * 1024,
+            path: "/downloads/ca-admin-tires.pdf",
+          },
+          {
+            name: "NTP - Procurement of Tires and Batteries for Admin Vehicles",
+            createdAt: "2026-05-28",
+            size: 904.6 * 1024,
+            path: "/downloads/ntp-admin-tires.pdf",
+          },
+          {
+            name: "CA - Procurement of Motor Vehicles Lot 1 - Pick up 38 Units and Multi-Purpose Vehicle (MPV) 6 Units",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-vehicles-lot1.pdf",
+          },
+          {
+            name: "NTP - Procurement of Special Purpose Vehicles for CEBn Lot 1 - Heavy Equipment",
+            createdAt: "2026-05-28",
+            size: 775.9 * 1024,
+            path: "/downloads/ntp-heavy-equipment.pdf",
+          },
+          {
+            name: "CA - Procurement of Special Purpose Vehicles for CEBn Lot 1 - Heavy Equipment",
+            createdAt: "2026-05-28",
+            size: 1.3 * 1024 * 1024,
+            path: "/downloads/ca-heavy-equipment.pdf",
+          },
+          {
+            name: "NTP - Procurement of Motor Vehicles Lot 1 - Pick up 38 Units and Multi-Purpose Vehicle (MPV) 6 Units",
+            createdAt: "2026-05-28",
+            size: 536.7 * 1024,
+            path: "/downloads/ntp-vehicles-lot1.pdf",
+          },
+          {
+            name: "CA- Procurement of Ammunition for Squad Rocket Launcher Light (SRLL)",
+            createdAt: "2026-05-28",
+            size: 1.3 * 1024 * 1024,
+            path: "/downloads/ca-srll-ammunition.pdf",
+          },
+          {
+            name: "CA - Procurement of Armaments (Thirteen (13) units of Sniper Rifle, 7.62mm Weapons System)",
+            createdAt: "2026-05-28",
+            size: 392.5 * 1024,
+            path: "/downloads/ca-sniper-rifles.pdf",
+          },
+          {
+            name: "NTP - Procurement of Armaments (Thirteen (13) units of Sniper Rifle, 7.62mm Weapons System)",
+            createdAt: "2026-05-28",
+            size: 168.7 * 1024,
+            path: "/downloads/ntp-sniper-rifles.pdf",
+          },
+          {
+            name: "NTP - Procurement of Ammunition for Squad Rocket Launcher Light (SRLL)",
+            createdAt: "2026-05-28",
+            size: 530.2 * 1024,
+            path: "/downloads/ntp-srll-ammunition.pdf",
+          },
+          {
+            name: "CA - Procurement of ICT Equipment",
+            createdAt: "2026-05-28",
+            size: 1.3 * 1024 * 1024,
+            path: "/downloads/ca-ict-equipment.pdf",
+          },
+          {
+            name: "NTP - Procurement of ICT Equipment",
+            createdAt: "2026-05-28",
+            size: 604.8 * 1024,
+            path: "/downloads/ntp-ict-equipment.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Parts and Materials for the Preventive Maintenance Schedule of Yamaha Outboard Motors",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-yamaha-pms.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Semi-Expendable Maintenance Support, Safety and Security Equipment",
+            createdAt: "2026-05-28",
+            size: 345.5 * 1024,
+            path: "/downloads/ntp-safety-equipment-a.pdf",
+          },
+          {
+            name: "NTP - Procurement and Installation of PPT Assembly",
+            createdAt: "2026-05-28",
+            size: 581.3 * 1024,
+            path: "/downloads/ntp-ppt-assembly.pdf",
+          },
+          {
+            name: "CA - Procurement and Installation of PPT Assembly",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-ppt-assembly.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Semi-Expendable Maintenance Support, Safety and Security Equipment (1)",
+            createdAt: "2026-05-28",
+            size: 740.6 * 1024,
+            path: "/downloads/ca-safety-equipment-b.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Semi-Expendable Maintenance Support, Safety and Security Equipment (2)",
+            createdAt: "2026-05-28",
+            size: 740.6 * 1024,
+            path: "/downloads/ca-safety-equipment-c.pdf",
+          },
+          {
+            name: "CA - Supply and Delivery of Carry-on Board Spares and Readily Available Spares for the Patrol Craft",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-patrol-craft-spares.pdf",
+          },
+          {
+            name: "CA - Procurement of Two (2) Units 200HP OBM and Hydraulic Steering for MCABBn Assets",
+            createdAt: "2026-05-28",
+            size: 1.2 * 1024 * 1024,
+            path: "/downloads/ca-obm-steering.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Parts and Materials for the Preventive Maintenance Schedule of Yamaha Outboard Motors",
+            createdAt: "2026-05-28",
+            size: 897.7 * 1024,
+            path: "/downloads/ntp-yamaha-pms.pdf",
+          },
+          {
+            name: "NTP - Supply and Delivery of Carry-on Board Spares and Readily Available Spares for the Patrol Craft",
+            createdAt: "2026-05-28",
+            size: 588.1 * 1024,
+            path: "/downloads/ntp-patrol-craft-spares.pdf",
+          },
+          {
+            name: "NTP - Procurement of Two (2) Units 200HP OBM and Hydraulic Steering for MCABBn Assets",
+            createdAt: "2026-05-28",
+            size: 562.7 * 1024,
+            path: "/downloads/ntp-obm-steering.pdf",
+          },
+          {
+            name: "Procurement of Material Handling Equipment",
+            createdAt: "2026-05-28",
+            size: 1.5 * 1024 * 1024,
+            path: "/downloads/ca-material-handling.pdf",
+          },
+          {
+            name: "NTP - Procurement of Material Handling Equipment",
+            createdAt: "2026-05-28",
+            size: 702.2 * 1024,
+            path: "/downloads/ntp-material-handling.pdf",
+          },
+          {
+            name: "CA MR - Supply and Delivery of Parts and Materials for the Preventive Maintenance of Patrol Riverine Craft",
+            createdAt: "2026-05-28",
+            size: 373.2 * 1024,
+            path: "/downloads/ca-riverine-pms.pdf",
+          },
+          {
+            name: "NTP MR - Supply and Delivery of Parts and Materials for the Preventive Maintenance of Patrol Riverine Craft",
+            createdAt: "2026-05-28",
+            size: 183.6 * 1024,
+            path: "/downloads/ntp-riverine-pms.pdf",
+          },
+          {
+            name: "CA - Procurement of Six (6) Units Brand New Outboard Motors for FRG",
+            createdAt: "2026-05-28",
+            size: 400.7 * 1024,
+            path: "/downloads/ca-frg-motors.pdf",
+          },
+          {
+            name: "NTP - Procurement of Six (6) Units Brand New Outboard Motors for FRG",
+            createdAt: "2026-05-28",
+            size: 176.4 * 1024,
+            path: "/downloads/ntp-frg-motors.pdf",
+          },
+        ],
+      },
+      {
+        title: "Early Procurement Activity",
+        files: [
+          {
+            name: "Certificate of Undertaking Early Procurement Activity",
+            createdAt: "2026-01-31",
+            size: 640.0 * 1024,
+            path: "/downloads/certificate-early-procurement.pdf",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "fin-03",
+    categoryName: "Annual Procurement Plan",
+    items: [
+      {
+        title: "Annual Procurement Plan 2024",
+        files: [
+          {
+            name: "Indicative Annual Procurement Plan",
+            createdAt: "2024-09-20",
+            size: 15.0 * 1024 * 1024,
+            path: "/downloads/indicative-app-2024.pdf",
+          },
+          {
+            name: "Annual Procurement Plan - Common Supplies and Equipment (APP-CSE) FY2024",
+            createdAt: "2024-09-20",
+            size: 11.4 * 1024 * 1024,
+            path: "/downloads/app-cse-fy2024.pdf",
+          },
+        ],
+      },
+      {
+        title: "Procurement Monitoring 2024",
+        files: [
+          {
+            name: "Procurement Monitoring Report PMCBAC for the 1st Semester FY2023",
+            createdAt: "2024-09-20",
+            size: 1.9 * 1024 * 1024,
+            path: "/downloads/pmr-1st-sem-fy2023.pdf",
+          },
+        ],
+      },
+      {
+        title: "Annual Procurement Plan for CY 2026",
+        files: [
+          {
+            name: "PMC APP CY2026",
+            createdAt: "2026-01-31",
+            size: 2.6 * 1024 * 1024,
+            path: "/downloads/pmc-app-cy2026.pdf",
+          },
+          {
+            name: "Change",
+            createdAt: "2026-01-31",
+            size: 6.0 * 1024 * 1024,
+            path: "/downloads/pmc-app-cy2026-changes.pdf",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "fin-04",
+    categoryName: "Procurement Resolutions",
+    items: [],
+  },
+  {
+    id: "fin-05",
+    categoryName: "Notice of Award",
+    items: [],
+  },
+  {
+    id: "fin-06",
+    categoryName: "Invitation to Bid",
+    items: [],
+  },
+  {
+    id: "fin-07",
+    categoryName: "Supplemental/Bid Bullet",
+    items: [],
+  },
+  {
+    id: "fin-08",
+    categoryName: "NOTICE TO PROCEED",
+    items: [],
+  },
+];

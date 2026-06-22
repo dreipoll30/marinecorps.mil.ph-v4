@@ -68,7 +68,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
         },
         {
             label: "CITEMAR6",
-            href: "/citemar6"
+            href: "/transparency-seal"
 
         },
         {
@@ -154,7 +154,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                                     href="/gad"
                                     items={joinItems}
                                 />
-                                <NavLink href="/lost-and-found" secondary={true}>Transparency Seal</NavLink>
+                                <NavLink href="/transparency-seal" secondary={true}>Transparency Seal</NavLink>
                             </Navitem>
                         </NavContainer>
                     </TopbarPanel>

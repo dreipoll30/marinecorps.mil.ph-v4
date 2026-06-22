@@ -2,7 +2,7 @@ import { Alert } from "@/app/components/alert";
 import { Button, ButtonArrow } from "@/app/components/button";
 import { Content, ContentPanel, ContentPanelBlock, ContentWrapper, ImageCaption, JoinImageCaption } from "@/app/components/content";
 import { joinMarineCorps } from "@/app/components/data/join/marines";
-import { FAQsDisclosure } from "@/app/components/disclosure";
+import { FAQsDisclosure } from "@/app/components/faq-disclosure";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import { IconArrowNarrowRight } from "@tabler/icons-react";

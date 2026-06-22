@@ -209,7 +209,7 @@ Converted to Plain CSS for Tailwind v4
   }
 
   h4 {
-    @apply text-[20px];
+    @apply text-[18px];
   }
 
   p {
