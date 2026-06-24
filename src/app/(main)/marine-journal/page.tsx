@@ -1,8 +1,10 @@
 import { ArticleDate, ArticleIDetails, ArticleImage, ArticleItem, Articles, ArticleTitle } from '@/app/components/articles'
 import { Content, ContentWrapper } from '@/app/components/content'
+import { journals } from '@/app/components/data/journal'
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from '@/app/components/header'
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from '@/app/components/section'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function MarineJournal() {
     return (
@@ -33,19 +35,22 @@ export default function MarineJournal() {
                     </Section>
                     <Section>
                         <Articles>
-                            <ArticleItem>
-                                <ArticleImage>
-                                    <img src="/static/stories-placeholder-2.jpg" 
-                                    className='block w-full h-auto'/>
-                                </ArticleImage>
-                                <ArticleIDetails>
-                                    <ArticleDate>
-                                        May 29, 2026
-                                    </ArticleDate>
-                                    <ArticleTitle>Philippine Marines and Japan Ground Self-Defense Force Conduct
-                                    </ArticleTitle>
-                                </ArticleIDetails>
-                            </ArticleItem>
+                            {journals.map((journal) => (
+                                    <ArticleItem key={journal.id} href={`/marine-journal/${journal.slug}`}>
+                                        <ArticleImage>
+                                            <img src={journal.cover_image}
+                                                className='block w-full h-auto' />
+                                        </ArticleImage>
+                                        <ArticleIDetails>
+                                            <ArticleDate>
+                                                {journal.date_posted}
+                                            </ArticleDate>
+                                            <ArticleTitle>{journal.title}
+                                            </ArticleTitle>
+                                        </ArticleIDetails>
+                                    </ArticleItem>
+                            ))}
+
                         </Articles>
                     </Section>
                 </ContentWrapper>

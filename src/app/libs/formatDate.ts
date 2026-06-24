@@ -1,9 +1,5 @@
-export const formatDate = (dateString: string | Date): string => {
-  const date = new Date(dateString);
+import moment from 'moment';
 
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  }).format(date);
+export const formatDate = (date: string, format = 'LL'): string => {
+  return moment(date).format(format);
 };

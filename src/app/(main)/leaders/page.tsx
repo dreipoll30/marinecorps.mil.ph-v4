@@ -9,8 +9,6 @@ import { Profile, ProfileCard, ProfileCardDetails, ProfileCardImage, ProfileItem
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
 import { Data, DataStrong, VerticalDataGroup } from "@/app/components/vertical-group";
 import { IconChevronRight, IconChevronRightFilled } from "@tabler/icons-react";
-
-
 import Image from 'next/image';
 
 export default function LeadersCorner() {

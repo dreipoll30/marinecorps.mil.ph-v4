@@ -1,7 +1,7 @@
 "use client"
 
 import PhotoSwipe from "photoswipe";
-import { Articles, ArticleItem, ArticleImage, ArticleIDetails, ArticleTitle, GalleryImage } from "./articles";
+import { Articles, ArticleItem, ArticleImage, ArticleIDetails, ArticleTitle, GalleryImage, GalleryItem } from "./articles";
 import { galleries } from "./data/gad";
 import React from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
@@ -28,7 +28,7 @@ export function Gallery() {
     return (
         <Articles>
             {galleries.map((gallery, index) => (
-                <ArticleItem 
+                <GalleryItem 
                     key={index} 
                     className="border-2 rounded-sm px-2 py-px bg-gray-300!" 
                     // Pass the event 'e' into the function
@@ -45,7 +45,7 @@ export function Gallery() {
                             {gallery.title}
                         </ArticleTitle>
                     </ArticleIDetails>
-                </ArticleItem>
+                </GalleryItem>
             ))}
         </Articles>
     )

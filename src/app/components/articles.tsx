@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { VerticalDataGroup } from "./vertical-group";
+import Link from "next/link";
 
 export function Articles({ children }: { children: ReactNode }) {
     return (
@@ -12,17 +13,17 @@ export function Articles({ children }: { children: ReactNode }) {
 interface ArticleItemProps {
     children: ReactNode;
     className?: string;
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    href:string;
 }
 
-export function ArticleItem({ children, className, onClick }:ArticleItemProps) {
+
+export function ArticleItem({ children, className, href }:ArticleItemProps) {
     return (
-        <div className={`group relative col-span-6 w-full h-67.5 max-h-100 md:col-span-3 lg:col-span-2 bg-gray-400 rounded-md overflow-hidden cursor-pointer ${className}`} onClick={onClick}>
+        <Link className={`group relative col-span-6 w-full h-67.5 max-h-100 md:col-span-3 lg:col-span-2 bg-gray-400 rounded-md overflow-hidden cursor-pointer ${className}`} href={href} >
             {children}
-        </div>
+        </Link>
     )
 }
-
 
 
 export function ArticleIDetails({ children }: { children: ReactNode }) {
@@ -61,6 +62,21 @@ export function GalleryImage ({ children, className }: { children: ReactNode, cl
         <div className={`z-1 relative flex justify-center items-center w-full h-auto duration-200 ease-in-out transforn group-hover:scale-105 ${className}`}>
             {children}
              <div className={`absolute inset-0 z-20 w-full h-full bg-linear-to-t from-slate-900/90 to-slate-900/20 opacity-100 transition-all duration-200 ease-in-out `} />
+        </div>
+    )
+}
+
+interface GalleryItemProps {
+    children: ReactNode;
+    className?: string;
+    onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+}
+
+
+export function GalleryItem({ children, className, onClick }:GalleryItemProps) {
+    return (
+        <div className={`group relative col-span-6 w-full h-67.5 max-h-100 md:col-span-3 lg:col-span-2 bg-gray-400 rounded-md overflow-hidden cursor-pointer ${className}`} onClick={onClick}>
+            {children}
         </div>
     )
 }
