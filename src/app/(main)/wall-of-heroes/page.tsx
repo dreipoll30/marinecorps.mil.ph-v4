@@ -6,10 +6,15 @@ import { Valor, ValorCard, ValorCardImage, ValorCardItem, ValorImage, ValorItem 
 import Image from 'next/image';
 import { ValorCards, ValorHero, ValorTopbar } from "./valor-hero";
 import { valors } from "@/app/components/data/heroes";
+import NavigationBar from "@/app/components/navigation";
+import Footer from "@/app/components/footer";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
 
 export default function WallOfHeroes() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -36,12 +41,14 @@ export default function WallOfHeroes() {
                         <ValorHero />
                     </Section>
                     <Section>
-                        <ValorTopbar/>
-                        <ValorCards/>
+                        <ValorTopbar />
+                        <ValorCards />
                     </Section>
                 </ContentWrapper>
             </Content>
-
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

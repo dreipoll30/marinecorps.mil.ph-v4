@@ -3,7 +3,11 @@ import { Button, ButtonArrow } from "@/app/components/button";
 import { Content, ContentPanel, ContentPanelBlock, ContentWrapper, ImageCaption, JoinImageCaption } from "@/app/components/content";
 import { joinMarineCorps } from "@/app/components/data/join/marines";
 import { FAQsDisclosure } from "@/app/components/faq-disclosure";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
@@ -11,6 +15,7 @@ import Image from "next/image";
 export default function JoinMarines() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -143,7 +148,7 @@ export default function JoinMarines() {
                                 ))}
                             </ul>
                             <h4>Initial Requirements:</h4>
-                            <Alert message={program.requirementsNote}/>
+                            <Alert message={program.requirementsNote} />
                             <ul>
                                 {program.requirements.map((requirement, index) => (
                                     <li key={index}>{requirement}</li>
@@ -154,10 +159,13 @@ export default function JoinMarines() {
 
                     <Section>
                         <h3>Frequently Asked Questions</h3>
-                        <FAQsDisclosure/>
+                        <FAQsDisclosure />
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

@@ -1,7 +1,11 @@
 import { ArticleAuthor, ArticleAuthorAvatar, ArticleAuthorDetails, ArticleAuthorName, ArticleAuthorRole, ArticleHead, ArticleItemBlock, ArticleItemBody, ArticleItemDate, ArticleItemImage, ArticleItemTitle, ArticleWrapper } from "@/app/components/article";
 import { Content, ContentWrapper } from "@/app/components/content";
 import { fetchJournalBySlug, journals } from "@/app/components/data/journal";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Breadcrumbs, BreadcrumbsItem, Section } from "@/app/components/section";
 import { formatDate } from "@/app/libs/formatDate";
 import { Metadata } from "next";
@@ -32,6 +36,7 @@ export default async function JournalBySlug({ params }: Props) {
     }
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -83,6 +88,9 @@ export default async function JournalBySlug({ params }: Props) {
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

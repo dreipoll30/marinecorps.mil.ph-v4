@@ -12,6 +12,10 @@ import Citemars from "../components/citemars";
 import { Features } from "../components/features";
 import Highlights from "../components/highlights";
 import RecentNews from "../components/recent-news";
+import Footer from "../components/footer";
+import Invitation from "../components/invitation";
+import LogoWall from "../components/logowall";
+import NavigationBar from "../components/navigation";
 
 interface CitemarsProps {
 
@@ -20,22 +24,26 @@ interface CitemarsProps {
 export default function Page() {
   return (
     <>
+      <NavigationBar />
       <Header>
         <HeaderSlide />
       </Header>
       <Shelf>
         <ShelfWrapper>
           <SectionHeadingWrapper>
-            <SectionHeading title="Recent CITEMAR6"/>
+            <SectionHeading title="Recent CITEMAR6" />
           </SectionHeadingWrapper>
           <ShelfBlock >
             <Citemars />
           </ShelfBlock>
         </ShelfWrapper>
       </Shelf>
-      <Features/>
-      <Highlights/>
-      <RecentNews/>
+      <Features />
+      <Highlights />
+      <RecentNews />
+      <Invitation />
+      <LogoWall />
+      <Footer />
     </>
   );
 }

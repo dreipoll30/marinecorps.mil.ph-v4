@@ -1,7 +1,11 @@
 import { Content, ContentPanel, ContentPanelBlock, ContentWrapper, ImageCaption } from '@/app/components/content';
 import { combats, reserved, supports, sustainments } from '@/app/components/data/combat-forces';
+import Footer from '@/app/components/footer';
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from '@/app/components/header';
+import Invitation from '@/app/components/invitation';
 import { ListboxWrapper, ListboxItem, ListboxImage, ListboxHeading } from '@/app/components/listbox';
+import LogoWall from '@/app/components/logowall';
+import NavigationBar from '@/app/components/navigation';
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from '@/app/components/section';
 import { HorizontalDataGroup, VerticalDataGroup } from '@/app/components/vertical-group';
 import Image from 'next/image';
@@ -11,6 +15,7 @@ import Link from 'next/link';
 export default function MarineForces() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -148,6 +153,9 @@ export default function MarineForces() {
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
 
         </>
     )

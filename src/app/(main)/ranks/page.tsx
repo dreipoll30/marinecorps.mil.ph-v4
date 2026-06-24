@@ -1,7 +1,11 @@
 import { Content, ContentWrapper } from "@/app/components/content";
 import { enlists, officers } from "@/app/components/data/ranks";
+import Footer from "@/app/components/footer";
 import { HeaderImage, HeaderInside, HeaderInsideWrapper } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
 import { ListboxHeading, ListboxImage, ListboxItem, ListboxWrapper } from "@/app/components/listbox";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
 import { Data, HorizontalDataGroup, VerticalDataGroup } from "@/app/components/vertical-group";
 import Image from 'next/image';
@@ -9,6 +13,7 @@ import Image from 'next/image';
 export default function Ranks() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -71,6 +76,9 @@ export default function Ranks() {
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

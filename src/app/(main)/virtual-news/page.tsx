@@ -1,11 +1,16 @@
 import { Content, ContentWrapper } from "@/app/components/content";
+import Footer from "@/app/components/footer";
 import { HeaderImage, HeaderInside, HeaderInsideWrapper } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import Image from "next/image";
 
 export default function VirtualNews() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -30,6 +35,9 @@ export default function VirtualNews() {
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

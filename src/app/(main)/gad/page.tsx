@@ -1,7 +1,11 @@
 import { ArticleItem, ArticleImage, ArticleIDetails, ArticleTitle, Articles } from "@/app/components/articles";
 import { Content, ContentWrapper } from "@/app/components/content";
+import Footer from "@/app/components/footer";
 import { Gallery } from "@/app/components/gad-gallery";
 import { HeaderImage, HeaderInside, HeaderInsideWrapper } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
 import Image from "next/image";
 
@@ -29,6 +33,7 @@ export default function GAD() {
     ]
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -84,10 +89,13 @@ export default function GAD() {
                             <li>Active participation in national and international mandated GAD-related advocacies such as the Campaign to End Violence against Women.</li>
                         </ol>
                         <h3>Activities:</h3>
-                        <Gallery/>
+                        <Gallery />
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

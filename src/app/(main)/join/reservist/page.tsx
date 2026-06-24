@@ -2,24 +2,30 @@ import { ButtonArrow } from "@/app/components/button";
 import { ContentWrapper, ContentPanel, ContentPanelBlock, JoinImageCaption, Content } from "@/app/components/content";
 import { reservistData } from "@/app/components/data/join/reservist";
 import { FAQsDisclosure } from "@/app/components/faq-disclosure";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import Image from "next/image";
 
 export default function () {
     return (
-        <> <HeaderInside>
-            <HeaderInsideWrapper>
-                <HeaderImage>
-                    <Image
-                        fill
-                        src="/static/header-inside-leaders.jpg"
-                        alt="Marine Corps Image"
-                        className="object-cover"
-                    />
-                </HeaderImage>
-            </HeaderInsideWrapper>
-        </HeaderInside>
+        <>
+            <NavigationBar />
+            <HeaderInside>
+                <HeaderInsideWrapper>
+                    <HeaderImage>
+                        <Image
+                            fill
+                            src="/static/header-inside-leaders.jpg"
+                            alt="Marine Corps Image"
+                            className="object-cover"
+                        />
+                    </HeaderImage>
+                </HeaderInsideWrapper>
+            </HeaderInside>
             <Content>
                 <ContentWrapper>
                     <Section>
@@ -106,7 +112,7 @@ export default function () {
                     </Section>
                     {reservistData.map((reservist, index) => (
                         <Section key={index}>
-                        <h3>{reservist.header}</h3>
+                            <h3>{reservist.header}</h3>
                             {reservist.sections?.map((section, index) => (
                                 <div key={index}>
                                     {section.title && (
@@ -128,6 +134,9 @@ export default function () {
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

@@ -2,7 +2,11 @@ import { Avatar } from "@/app/components/avatar";
 import { Content, ContentWrapper } from "@/app/components/content";
 import { credits } from "@/app/components/data/credits";
 import { Drilldown, DrilldownBody, DrillDownListItem } from "@/app/components/drilldown";
+import Footer from "@/app/components/footer";
 import { HeaderImage, HeaderInside, HeaderInsideWrapper } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
 import { HorizontalDataGroup, VerticalDataGroup } from "@/app/components/vertical-group";
 import Image from "next/image";
@@ -10,6 +14,7 @@ import Image from "next/image";
 export default function Credits() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -55,6 +60,9 @@ export default function Credits() {
                     ))}
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
 
         </>
     )

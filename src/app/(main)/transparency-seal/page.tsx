@@ -2,8 +2,12 @@ import { Content, ContentWrapper } from "@/app/components/content";
 import { reports, transparencyData, TransparencyReport } from "@/app/components/data/transparency";
 import DisclosureComponent from "@/app/components/disclosure";
 import { Drilldown, DrilldownBody, DrilldownHeading } from "@/app/components/drilldown";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
 import { ImageBlock, LogoImageItem } from "@/app/components/image-block";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import { Table, TableBody, TableData, TableHead, TableHeader, TableRow, TableSectionRow } from "@/app/components/table";
 import Image from "next/image";
@@ -43,6 +47,7 @@ export default function TransparencySeal() {
 
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -147,6 +152,9 @@ export default function TransparencySeal() {
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

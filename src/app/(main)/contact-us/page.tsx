@@ -3,15 +3,12 @@
 import { ContactDetails, ContactDetailsBlock, } from "@/app/components/contact";
 import { ContactForm } from "@/app/components/contact-form";
 import { Content, ContentPanel, ContentPanelBlock, ContentWrapper } from "@/app/components/content";
-import { FormRow, FormWrapper } from "@/app/components/forms/form";
-import { FormInput } from "@/app/components/forms/form-input";
-import { FormLabel } from "@/app/components/forms/form-label";
-import { FormSelect } from "@/app/components/forms/form-select";
-import { FormText } from "@/app/components/forms/form-text";
-import { FormTextArea } from "@/app/components/forms/form-text-area";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
-import { Form, Formik } from "formik";
 import Image from "next/image";
 import React from "react";
 
@@ -84,6 +81,7 @@ export default function ContactUs() {
     ]
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -107,8 +105,8 @@ export default function ContactUs() {
                         </SectionHeadingWrapper>
                     </Section>
                     <Section>
-                        <ContactForm/>
-                        
+                        <ContactForm />
+
                     </Section>
                     {/* <Section>
                         <FormRow>
@@ -160,6 +158,9 @@ export default function ContactUs() {
                     </Section>
                 </ContentWrapper>
             </Content>
+            <Invitation />
+            <LogoWall />
+            <Footer />
         </>
     )
 }

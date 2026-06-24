@@ -4,7 +4,11 @@ import { Content, ContentPanel, ContentPanelBlock, ContentWrapper, ImageCaption,
 import { civilRequirements } from "@/app/components/data/join/civilian";
 
 import { FAQsDisclosure } from "@/app/components/faq-disclosure";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
@@ -12,6 +16,7 @@ import Image from "next/image";
 export default function JoinMarines() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -92,11 +97,11 @@ export default function JoinMarines() {
                             <>
                                 <h4>{require.title}</h4>
                                 <ul className="last:mb-0">
-                                {require.requirements.map((requirement) => (
+                                    {require.requirements.map((requirement) => (
                                         <li>
                                             {requirement}
                                         </li>
-                                ))}
+                                    ))}
                                 </ul>
                             </>
                         ))}
@@ -107,6 +112,9 @@ export default function JoinMarines() {
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

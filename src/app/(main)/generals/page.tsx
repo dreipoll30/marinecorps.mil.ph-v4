@@ -2,7 +2,11 @@ import { Content, ContentWrapper } from "@/app/components/content";
 import { marineGenerals } from "@/app/components/data/generals";
 import { lineageCommandants } from "@/app/components/data/lineage-commandants";
 import { sergeantsMajor } from "@/app/components/data/sergeants";
+import Footer from "@/app/components/footer";
 import { HeaderInside, HeaderInsideWrapper, HeaderImage } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Profile, ProfileCard, ProfileCardDetails, ProfileCardImage, ProfileItem } from "@/app/components/profile";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
 import { VerticalDataGroup, DataStrong, Data } from "@/app/components/vertical-group";
@@ -13,6 +17,7 @@ import Image from 'next/image';
 export default function Generals() {
     return (
         <>
+        <NavigationBar/>
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -61,6 +66,9 @@ export default function Generals() {
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

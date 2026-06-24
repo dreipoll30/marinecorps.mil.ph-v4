@@ -3,8 +3,12 @@ import { Content, ContentWrapper } from "@/app/components/content";
 import { brigadeCommanders } from "@/app/components/data/brigade-leaders";
 import { commandants } from "@/app/components/data/commandants";
 import { leaders } from "@/app/components/data/leaders";
+import Footer from "@/app/components/footer";
 import { HeaderImage, HeaderInside, HeaderInsideWrapper } from "@/app/components/header";
+import Invitation from "@/app/components/invitation";
 import LeadersChart from "@/app/components/leaders-chart";
+import LogoWall from "@/app/components/logowall";
+import NavigationBar from "@/app/components/navigation";
 import { Profile, ProfileCard, ProfileCardDetails, ProfileCardImage, ProfileItem } from "@/app/components/profile";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
 import { Data, DataStrong, VerticalDataGroup } from "@/app/components/vertical-group";
@@ -14,6 +18,7 @@ import Image from 'next/image';
 export default function LeadersCorner() {
     return (
         <>
+            <NavigationBar />
             <HeaderInside>
                 <HeaderInsideWrapper>
                     <HeaderImage>
@@ -109,7 +114,7 @@ export default function LeadersCorner() {
                                             <VerticalDataGroup className="leading-4">
                                                 <DataStrong>{commandant.rank} {commandant.name}</DataStrong>
                                                 <Data>
-                                                   {commandant.department}
+                                                    {commandant.department}
                                                 </Data>
                                             </VerticalDataGroup>
                                         </ProfileCardDetails>
@@ -129,7 +134,7 @@ export default function LeadersCorner() {
                                             <VerticalDataGroup className="leading-4">
                                                 <DataStrong>{commander.rank} {commander.name}</DataStrong>
                                                 <Data>
-                                                   {commander.department}
+                                                    {commander.department}
                                                 </Data>
                                             </VerticalDataGroup>
                                         </ProfileCardDetails>
@@ -140,6 +145,9 @@ export default function LeadersCorner() {
                     </Section>
                 </ContentWrapper>
             </Content>
+                            <Invitation />
+                            <LogoWall />
+                            <Footer />
         </>
     )
 }

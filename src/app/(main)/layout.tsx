@@ -15,13 +15,9 @@ export default function MainLayout({
 }) {
     return (
         <div className="min-h-full flex flex-col">
-            <Topbar />
             <main className="flex flex-1 flex-col w-full">
                 {children}
             </main>
-            <Invitation/>
-            <LogoWall/>
-            <Footer/>
         </div>
     )
 }
