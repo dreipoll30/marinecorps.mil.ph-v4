@@ -20,19 +20,18 @@ interface ContentPanelProps {
 
 export function ContentPanel({ children, className, reverse}: ContentPanelProps) {
     return (
-        <div className={`w-full grid grid-cols-1 gap-11 md:gap-18  mb-16 md:grid-cols-2 ${reverse ? "[&>*:first-child]:order-2 [&>*:last-child]:order-1" : ''} ${className}`}>
+        <div className={`w-full grid grid-cols-1 gap-11 md:gap-18 mb-16 md:grid-cols-2 ${reverse ? "[&>*:first-child]:order-2 [&>*:last-child]:order-1" : ''} ${className}`}>
             {children}
         </div>
     )
 }
 
-export function ContentPanelBlock({ children }: { children: React.ReactNode }) {
+export function ContentPanelBlock({ children, className }: { children: React.ReactNode, className?: string}) {
     return (
-        <div className="relative flex flex-col col-span-1 justify-center w-full h-full my-3 last:mb-0">
+        <div className={`relative flex flex-col col-span-1 justify-center w-full h-full my-3 last:mb-0 ${className}`}>
             {children}
         </div>
     )
-
 }
 
 export function ImageCaption({ children }: { children: React.ReactNode }) {

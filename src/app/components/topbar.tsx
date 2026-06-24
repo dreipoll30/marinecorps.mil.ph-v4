@@ -126,7 +126,7 @@ export default function Topbar({ toggleMenu }: TopbarMenuProps) {
                         <NavContainer>
                             <Navitem>
                                 <NavLink href="/contact-us">Contact Us</NavLink>
-                                <NavLink href="/careers" >Credits</NavLink>
+                                <NavLink href="/credits " >Credits</NavLink>
                             </Navitem>
                             <SocialMenu>
                                 <TopbarSocialMenuItem className="icon icon-logo-facebook" href="" label="" scrolled={scrolled} />

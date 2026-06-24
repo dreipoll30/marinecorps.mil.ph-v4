@@ -46,7 +46,7 @@ export function DrilldownList ({children, className}: DrilldownListProps) {
 
 export function DrillDownListItem ({children}: {children: React.ReactNode}) {
     return (
-        <div className=" w-full border-b border-1 px-4 py-2 last:border-none">
+        <div className=" w-full border-b border-gray-100 p-3 last:border-none">
             {children}
         </div>
     )
