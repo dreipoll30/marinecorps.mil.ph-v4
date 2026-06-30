@@ -102,16 +102,16 @@ export const navigationData = [
 
 export default function Footer() {
     return (
-        <div className="relative w-full flex flex-col flex-nowrap h-auto lg:py-18 py-9 bg-svg-pattern">
+        <div className="relative w-full flex flex-col flex-nowrap h-auto py-9  md:py-18 bg-svg-pattern">
             <FooterWrapper>
                 <FooterGridContainer>
-                    <FooterGridItem>
+                    <FooterGridItem className="lg:col-span-6 md:col-span-4">
                         <FooterBrandItems>
                             <FooterBrand src="/static/pmc-logo.png" href="" alt="" />
                             <h2 className="text-secondary-600 lg:text-[28px] text-[22px] mb-0">Philippine Marine Corps</h2>
                         </FooterBrandItems>
                     </FooterGridItem>
-                    <FooterGridItem>
+                    <FooterGridItem className="lg:col-span-6 md:col-span-8">
                         <FooterBlock className="border-b">
                             <Social>
                                 <h3 className="text-[22px] mb-0 text-center">Stay Connected</h3>
@@ -166,9 +166,9 @@ export function FooterGridContainer({ children }: { children: ReactNode }) {
     )
 }
 
-export function FooterGridItem({ children }: { children: ReactNode }) {
+export function FooterGridItem({ children, className }: { children: ReactNode, className?:string }) {
     return (
-        <div className="relative lg:col-span-6 col-span-12">
+        <div className={`relative lg:col-span-6 col-span-12 ${className}`}>
             {children}
         </div>
     )
@@ -184,7 +184,7 @@ export function FooterBlock({ children, className }: { children: ReactNode, clas
 
 export function FooterBrandItems({ children }: { children: ReactNode }) {
     return (
-        <div className="w-full flex flex-row gap-2 flex-nowrap items-center text-center">
+        <div className="w-full flex flex-col lg:flex-row gap-2 flex-nowrap  justify-center items-center text-center lg:justify-normal">
             {children}
         </div>
     )
@@ -201,7 +201,7 @@ interface FooterBrandProps {
 export function FooterBrand({ children, href, alt, src }: FooterBrandProps) {
     return (
         <Link href={href}>
-            <div className="relative lg:w-33 lg:h-30 w-28 h-31 flex items-center">
+            <div className="relative md:w-33 w-28 h-31 flex items-center">
                 <Image
                     src={src}
                     alt={alt}
@@ -215,7 +215,7 @@ export function FooterBrand({ children, href, alt, src }: FooterBrandProps) {
 
 export function FooterMenu({ children }: { children: ReactNode }) {
     return (
-        <div className="lg:col-span-6 gap-6 flex lg:flex-row flex-col py-3 ">
+        <div className="sm:grid sm:grid-cols-6 gap-6 flex flex-col py-3 ">
             {children}
         </div>
     )
@@ -223,7 +223,7 @@ export function FooterMenu({ children }: { children: ReactNode }) {
 
 export function FooterMenuGroup({ children }: { children: ReactNode }) {
     return (
-        <div className="flex flex-col flex-nowrap col-span-2 w-full">
+        <div className="flex flex-col w-full flex-nowrap sm:col-span-3 md:col-span-2  ">
             {children}
         </div>
     )
@@ -231,7 +231,7 @@ export function FooterMenuGroup({ children }: { children: ReactNode }) {
 
 export function FooterMenuGroupHeading({ children }: { children: ReactNode }) {
     return (
-        <h2 className="text-[20px] lg:text-left text-center block mb-0 w-full">
+        <h2 className="text-[20px] sm:text-left text-center block mb-0 w-full">
             {children}
         </h2>
     )
@@ -259,7 +259,7 @@ interface NavlinksLinkProps {
 }
 export function NavlinksLink({ children, href }: NavlinksLinkProps) {
     return (
-        <Link className="block w-full m-0 text-gray-500 decoration-0 text-center lg:text-left text-[18px] hover:text-secondary-500" href={href}>
+        <Link className="block w-full m-0 text-gray-500 decoration-0 text-center sm:text-left text-[18px] hover:text-secondary-500" href={href}>
             {children}
         </Link>
     )

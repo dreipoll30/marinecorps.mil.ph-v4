@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { HorizontalDataGroup } from "./vertical-group";
+import { HorizontalDataGroup } from "./data-group";
 
 export function ListboxWrapper ({children, className}:{children: ReactNode, clasName?:string}) {
     return (

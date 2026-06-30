@@ -2,7 +2,7 @@ import { Avatar } from "@/app/components/avatar";
 import { valors } from "@/app/components/data/heroes";
 import MedalIcon from "@/app/components/icons/medal-icon";
 import { Valor, ValorBadge, ValorCard, ValorCardDetails, ValorCardImage, ValorCardItem, ValorImage, ValorItem, ValorMini } from "@/app/components/valor";
-import { DataStrong, VerticalDataGroup } from "@/app/components/vertical-group";
+import { DataStrong, VerticalDataGroup } from "@/app/components/data-group";
 
 export function ValorHero() {
     return (

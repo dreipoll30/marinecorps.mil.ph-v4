@@ -14,10 +14,12 @@ export default function MainLayout({
     className?: string
 }) {
     return (
-        <div className="min-h-full flex flex-col">
-            <main className="flex flex-1 flex-col w-full">
-                {children}
-            </main>
-        </div>
+        <main>
+            <div className="min-h-screen h-full w-full flex bg-white">
+                <div className="flex flex-col w-full m-auto p-0 max-w-full">
+                    {children}
+                </div>
+            </div>
+        </main >
     )
 }

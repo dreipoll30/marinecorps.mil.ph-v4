@@ -37,7 +37,7 @@ export default function Events() {
                     <Section>
                         <EventsWrapper>
                             {events.map((event) => (
-                                <EventItem key={event.id} gradientClass={event.gradient}>
+                                <EventItem key={event.id} gradientClass={event.gradient} href={event.href}>
                                     <EventStatus status={event.status} />
                                     <EventDetails>
                                         <EventDate>

@@ -3,7 +3,7 @@ import React, { ReactNode } from "react"
 
 export function Social({ children }: { children: ReactNode }) {
     return (
-        <div className="w-full flex flex-col gap-4 lg:gap-0 lg:flex-row flex-nowrap justify-between ">
+        <div className="w-full flex flex-col gap-4 lg:gap-0 sm:flex-row flex-nowrap justify-between ">
             {children}
         </div>
     )

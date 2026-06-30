@@ -8,7 +8,7 @@ import Invitation from "@/app/components/invitation";
 import LogoWall from "@/app/components/logowall";
 import NavigationBar from "@/app/components/navigation";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
-import { HorizontalDataGroup, VerticalDataGroup } from "@/app/components/vertical-group";
+import { HorizontalDataGroup, VerticalDataGroup } from "@/app/components/data-group";
 import Image from "next/image";
 
 export default function Credits() {

@@ -4,6 +4,7 @@ type EventItems = {
     name: string;
     status: string;
     gradient: string;
+    href:string;
 }
 
 export const events: EventItems[] = [
@@ -12,35 +13,40 @@ export const events: EventItems[] = [
         date: "2025 May",
         name: "Kamandag Exercise to Return in 2025",
         status: "Upcoming",
-        gradient: "from-green-950 via-green-700 to-green-300"
+        gradient: "from-green-950 via-green-700 to-green-300",
+        href:"/events/kamandag-exercise-to-return-in-2025",
     },
     {
         id: 2,
         date: "2025 August 29",
         name: "CPMC’s Book Review Contest CY 2025",
         status: "Ongoing",
-        gradient: "from-blue-950 via-blue-800 to-blue-400"
+        gradient: "from-blue-950 via-blue-800 to-blue-400",
+        href:"/events/cpmc-book-review-contest-cy-2025",
     },
      {
         id: 3,
         date: "2025 May 30",
         name: "Essay Writing Contest Cy 2025",
         status: "Ongoing",
-        gradient: "from-blue-950 via-blue-800 to-blue-400"
+        gradient: "from-blue-950 via-blue-800 to-blue-400",
+        href:"/events/essay-writing-contest-cy-2025",
     },
     {
         id: 4,
         date: "2025 July 7 - 2025 July 11",
         name: "Pacific Amphibious Leaders Symposium 2025",
         status: "Upcoming",
-        gradient: "from-orange-800 via-orange-400 to-yellow-200"
+        gradient: "from-orange-800 via-orange-400 to-yellow-200",
+        href:"/events/pacific-amphibious-leaders-symposium",
     },
     {
         id: 5,
         date: "2025 July 7 - 2025 July 11",
         name: "Pacific Amphibious Leaders Symposium 2025",
         status: "Completed",
-        gradient: "from-stone-700 via-gray-400 to-stone-200"
+        gradient: "from-stone-700 via-gray-400 to-stone-200",
+        href:"/events/pmc-budget-forum-fy-2025",
     },
 
 ]

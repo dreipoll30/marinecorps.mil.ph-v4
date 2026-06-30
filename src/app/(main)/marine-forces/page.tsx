@@ -7,7 +7,7 @@ import { ListboxWrapper, ListboxItem, ListboxImage, ListboxHeading } from '@/app
 import LogoWall from '@/app/components/logowall';
 import NavigationBar from '@/app/components/navigation';
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from '@/app/components/section';
-import { HorizontalDataGroup, VerticalDataGroup } from '@/app/components/vertical-group';
+import { HorizontalDataGroup, VerticalDataGroup } from '@/app/components/data-group';
 import Image from 'next/image';
 import Link from 'next/link';
 

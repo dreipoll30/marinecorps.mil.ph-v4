@@ -11,7 +11,7 @@ import LogoWall from "@/app/components/logowall";
 import NavigationBar from "@/app/components/navigation";
 import { Profile, ProfileCard, ProfileCardDetails, ProfileCardImage, ProfileItem } from "@/app/components/profile";
 import { Breadcrumbs, BreadcrumbsItem, Section, SectionHeading, SectionHeadingWrapper } from "@/app/components/section";
-import { Data, DataStrong, VerticalDataGroup } from "@/app/components/vertical-group";
+import { Data, DataStrong, VerticalDataGroup } from "@/app/components/data-group";
 import { IconChevronRight, IconChevronRightFilled } from "@tabler/icons-react";
 import Image from 'next/image';
 

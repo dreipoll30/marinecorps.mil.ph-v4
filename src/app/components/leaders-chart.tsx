@@ -12,7 +12,7 @@ import {
   OrgchartGroup
 } from "./orgchart/orgchart";
 import Popover from "./popover";
-import { VerticalDataGroup } from "./vertical-group";
+import { VerticalDataGroup } from "./data-group";
 
 export default function LeadersChart() {
     // 1. Core Top Hierarchy Parsing

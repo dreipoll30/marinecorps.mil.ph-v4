@@ -4,7 +4,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { IconChevronDown } from '@tabler/icons-react'
 import { ReactNode } from 'react'
 import { DisclosureIcon, DisclosureItem, DisclosureTitle } from './faq-disclosure';
-import { Data, VerticalDataGroup } from './vertical-group';
+import { Data, VerticalDataGroup } from './data-group';
 import Link from 'next/link';
 import { formatDate } from '../libs/formatDate';
 import { formatSize } from '../libs/fortmatSize';

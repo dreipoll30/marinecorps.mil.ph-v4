@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
-import { VerticalDataGroup } from "./vertical-group";
+import React, { ReactNode } from "react";
+import { VerticalDataGroup } from "./data-group";
+import Link from "next/link";
 
 export function EventsWrapper({ children }: { children: ReactNode }) {
     return (
@@ -9,11 +10,16 @@ export function EventsWrapper({ children }: { children: ReactNode }) {
     )
 }
 
-export function EventItem({ children, gradientClass }: { children: ReactNode, gradientClass:string }) {
+interface EventItemProps {
+    children?: ReactNode;
+    gradientClass?: string;
+    href: string;
+}
+export function EventItem({ children, gradientClass,href }: EventItemProps) {
     return (
-        <div className={`group relative col-span-6 w-full h-67.5 max-h-100 lg:col-span-3 bg-linear-to-br ${gradientClass} rounded-md overflow-hidden cursor-pointer `}>
+        <Link href={href} className={`group relative col-span-6 w-full h-67.5 max-h-100 lg:col-span-3 bg-linear-to-br ${gradientClass} rounded-md overflow-hidden cursor-pointer `}>
             {children}
-        </div>
+        </Link>
     )
 }
 

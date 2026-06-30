@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { VerticalDataGroup } from "./vertical-group";
+import { VerticalDataGroup } from "./data-group";
 import Link from "next/link";
 
 export function Articles({ children }: { children: ReactNode }) {

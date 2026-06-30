@@ -9,7 +9,7 @@ import LogoWall from "@/app/components/logowall";
 import NavigationBar from "@/app/components/navigation";
 import { Profile, ProfileCard, ProfileCardDetails, ProfileCardImage, ProfileItem } from "@/app/components/profile";
 import { Section, SectionHeadingWrapper, SectionHeading, Breadcrumbs, BreadcrumbsItem } from "@/app/components/section";
-import { VerticalDataGroup, DataStrong, Data } from "@/app/components/vertical-group";
+import { VerticalDataGroup, DataStrong, Data } from "@/app/components/data-group";
 
 
 import Image from 'next/image';
